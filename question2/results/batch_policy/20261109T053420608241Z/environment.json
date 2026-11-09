@@ -1,0 +1,53 @@
+{
+  "python": "3.12.14",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+  "cases_sha256": "26b05d206e249597774af3b9613c0e110ef076ec955f42438a053bd14c643165",
+  "timed_runs": 504,
+  "timing_scope": "Includes dispatch, normalization, preparation, all searches and path recovery. Dijkstra verification is outside timing.",
+  "sources": {
+    "batch_policy_study.py": "11f615149bf7f01afa3c40e8ff6e34daf4c5aa7e888efc0c35edcf594da72266",
+    "summary.csv": "c881889a29f0a12cb49d3bfcabd9aa78ab0b05d62734c0f3663be8df8da1f2c7",
+    "weighted_astar.py": "cb90b8192f9d6152fa9953ba35b460e9e0414c85277beca66708c2d743433159",
+    "reverse_bound.py": "5f4473656479add8485a1cb7cca04f33f0cd01e3038c2831de1c12c1c6f0d797",
+    "reference.py": "66afc45c3baa50879a6d4fe71f63d73722fd3d0cf26a710c258234c9137a81c7",
+    "course_study_io.py": "7fc101d2227aefa464f96067cedf1b3b2c8b3795123a363f9c7025f899b8644e"
+  },
+  "calibration": "results/course_followup/20261109T031416794508Z/summary.csv",
+  "calibration_batches": 36,
+  "calibration_metric": "Mean of batch time divided by the faster fixed mode in that batch",
+  "candidates": [
+    {
+      "threshold": 1,
+      "mean_relative_time": 1.261386163529757
+    },
+    {
+      "threshold": 4,
+      "mean_relative_time": 1.1532272795042076
+    },
+    {
+      "threshold": 16,
+      "mean_relative_time": 1.1566419797414356
+    },
+    {
+      "threshold": 64,
+      "mean_relative_time": 1.9976885474049497
+    },
+    {
+      "threshold": null,
+      "mean_relative_time": 5.301402631787148
+    }
+  ],
+  "threshold": 4,
+  "seeds": [
+    202611091,
+    202611092
+  ],
+  "query_counts": [
+    1,
+    4,
+    16,
+    64
+  ],
+  "repeats": 7
+}

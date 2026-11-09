@@ -48,3 +48,6 @@ python structural_study.py --repeats 12 --output "$run/q3-cache"
 ```
 
 基准为 38 个输入、8 配置，每个计时 8 次，固定随机顺序种子 42，与独立完整回传核对。审计另外输出窗口轨迹和 24 种顺序的汇总。结构实验为 42 个输入、6 配置，每个计时 12 次，含重复与无重复输入。 [基准输入及计时](results/report_followup/20261105T2245261782216) · [随机顺序汇总](results/report_followup/20261105T2245261782216/order_summary.csv) · [结构缓存批次](results/structural_followup/20261105T2239574201109)
+
+
+同一官方样例的 8 次计时中，Minimax 左序的总耗时中位数为 0.043 ms，测得范围为 0.041–0.044 ms。左序 Alpha-Beta 的中位数为 0.048 ms，测得范围为 0.044–0.080 ms。[原始计时](results/report_followup/20261105T2245261782216/raw_runs.csv)

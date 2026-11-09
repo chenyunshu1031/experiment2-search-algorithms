@@ -64,7 +64,7 @@ python verify_all.py --smoke-only
 python verify_all.py
 ```
 
-完整核验应显示四行 `official sample passed`，各题通过 **7、12、17、21** 项测试，共 **57** 项，最后显示 `All passed.`。两种核验均写出 `verification/<时间戳>/verification.json`，其中 `questions[].official_output` 是四题样例答案，完整运行还记录测试日志和源码哈希。 [完整核验记录](verification/20261109T045008854425Z/verification.json) · [样例命令与输出](verification/20261109T025803635497Z/sample_runs.txt)
+完整核验应显示四行 `official sample passed`，各题通过 **7、12、17、21** 项测试，共 **57** 项，最后显示 `All passed.`。两种核验均写出 `verification/<时间戳>/verification.json`，其中 `questions[].official_output` 是四题样例答案，完整运行还记录测试日志和源码哈希。 [完整核验记录](verification/20261109T053643355333Z/verification.json) · [样例命令与输出](verification/20261109T025803635497Z/sample_runs.txt)
 
 [终端运行截图](verification/20261109T030652909457Z/terminal_verification.png)记录一次较早的四题核验，共 56 项测试，可与[同批 JSON 日志](verification/20261109T030652909457Z/verification.json)对照。当前 57 项测试的结果见上方完整核验记录。
 
@@ -130,7 +130,7 @@ A* 用坐标表示状态，`g` 记录已走步数，`h` 估计剩余步数，堆
 
 样例走 8 步，前 7 步各付 1，进入 E 付 0。离 E 一格时真实剩余费用为 0，因此普通曼哈顿可能高估。修正下界扣除免费一步，终点邻域下界再计入必经邻格的最低费用。固定较大 `g` 优先，样例从零启发的 14 次扩展降到 8 次。
 
-另设高价列、高价圈和多起点查询，分别检查下界能否识别必经费用、建表能否回本。高价整列场景中，行列下界使扩展 3060→120，但只按行列取最小值会漏掉局部高价圈。在 61×61 随机权值图上，单个起点查询用终点邻域 A* 更快。64 个起点共用一个终点时，逐次 A*、共享预算 512 的反向下界和精确反向搜索分别用时 132.463、104.249、5.208 ms，均含路径恢复。 [题二公式、费用明细和复跑命令](question2/README.md)
+另设高价列、高价圈和多起点查询，分别检查下界能否识别必经费用、建表能否回本。高价整列场景中，行列下界使扩展 3060→120，但只按行列取最小值会漏掉局部高价圈。在 61×61 随机权值图上，单个起点查询用终点邻域 A* 更快。64 个起点共用一个终点时，逐次 A*、共享预算 512 的反向下界和精确反向搜索分别用时 132.463、104.249、5.208 ms，均含路径恢复。 另用旧图确定 4 个起点的切换阈值，在 6 张新图上独立检验。24 个批次中有 20 次选中中位耗时更低的固定方法。 [新图复测汇总](question2/results/batch_policy/20261109T053420608241Z/summary.csv) [题二公式、费用明细和复跑命令](question2/README.md)
 
 ### 题三 · Alpha-Beta 剪枝
 
@@ -189,6 +189,7 @@ $run = Join-Path ".venv/repro" (Get-Date -Format "yyyyMMdd-HHmmss-fff")
 python question1/heuristic_study.py --repeats 7 --output "$run/q1-heuristics"
 python question2/geometry_heuristic_study.py --repeats 9 --output "$run/q2-heuristics"
 python question2/batch_reverse_study.py --repeats 7 --output "$run/q2-batch"
+python question2/batch_policy_study.py --repeats 7 --output "$run/q2-policy"
 python question3/benchmark.py --repeats 8 --output "$run/q3-order"
 python question3/audit_report_evidence.py --results "$run/q3-order" --study
 python question3/structural_study.py --repeats 12 --output "$run/q3-cache"
