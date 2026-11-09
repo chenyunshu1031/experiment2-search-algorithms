@@ -1,0 +1,18 @@
+{
+  "python": "3.12.14",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+  "cases_sha256": "32eeda682d4f917f679e1807f4a78b1b17fa19436fd8cf5c1a059d31fdfe4082",
+  "timed_runs": 3456,
+  "timing_scope": "normalization + bound preparation (including reverse search) + A* + path reconstruction",
+  "sources": {
+    "weighted_heuristic_study.py": "fc7b7d5edd8d516cdd570ad32ab28599e9702678e5968d7db18504f27e20f76a",
+    "weighted_astar.py": "6267ade04441479743fb97f15ce69a63416c274f60cbb5f718f19dbbac0d2ed5",
+    "axis_heuristic.py": "5d0a5af10a478e774d9a847a6707fb1498c1389c2c1246b67dcef67405b75e5e",
+    "reverse_bound.py": "cfafd697b6e110eaeac3ebdd8e7bfb086b918ff463d122e2f4b0d7a2afd31d0c",
+    "reference.py": "66afc45c3baa50879a6d4fe71f63d73722fd3d0cf26a710c258234c9137a81c7",
+    "course_axis_study.py": "aa8ff56d05eab00653425f7dc4d90c623c2d11c47ad530792224783aa5ae6fbc",
+    "course_study_io.py": "7fc101d2227aefa464f96067cedf1b3b2c8b3795123a363f9c7025f899b8644e"
+  },
+  "repeats": 8
+}

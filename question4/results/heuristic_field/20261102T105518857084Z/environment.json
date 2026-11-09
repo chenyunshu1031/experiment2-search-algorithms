@@ -1,0 +1,18 @@
+{
+  "python": "3.13.7",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "inputs_sha256": "28ffe5d91551e419cf200f1dc88757a7d100f8b81da81e7b41425e4cadbeab6e",
+  "repeats": 7,
+  "cases": 27,
+  "unique_grids": 17,
+  "timed_runs": 567,
+  "workflow_runs": 21,
+  "hashes": {
+    "batched_pathfinding.py": "ecc03c8d12f50b08e55895cc4f7bc563c0448db24739e3e11be74215c08c4b6e",
+    "heuristic_field_study.py": "fa32209a0a1e2798f074a771c7f2dfea95d1c04965681c5a6ba6f013dad03af2",
+    "pathfinding.py": "3d20f858c9391a826cae2890c1913037be44563c9b759eef7e11556052474203",
+    "treasure_game.py": "2f6131d406655c8425d5a0ce4447d4fa78f4986557b02e9f018f30923bfb8d61",
+    "reference.py": "8de4550bf1942b6b3137ad8aa9272f93979d5580f897418d166e8681d902b072"
+  },
+  "timing": "Includes field construction, normalization and all paths. Excludes oracle, validation and file IO."
+}

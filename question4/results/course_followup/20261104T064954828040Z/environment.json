@@ -1,0 +1,17 @@
+{
+  "python": "3.12.14",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+  "cases_sha256": "6a20988d33db5e9e6c51b1a8fb1f540402ba1735bfadf9cd780ec350e10fe2e5",
+  "timed_runs": 1332,
+  "timing_scope": "fixed distance matrix; validation + shallow passes + ordering + final search",
+  "sources": {
+    "course_order_study.py": "07cc02bec023a1d71f2dfc465c7184137fe6e0abbe99a779ddc5a6e15f4e8036",
+    "treasure_game.py": "ff71fba44aed13a775c92257bcd36de62a5f2603d720d4433b51e68a5c5270a3",
+    "pathfinding.py": "3d20f858c9391a826cae2890c1913037be44563c9b759eef7e11556052474203",
+    "reference.py": "8de4550bf1942b6b3137ad8aa9272f93979d5580f897418d166e8681d902b072",
+    "course_study_io.py": "7fc101d2227aefa464f96067cedf1b3b2c8b3795123a363f9c7025f899b8644e"
+  },
+  "repeats": 6,
+  "shallow_schedule": "1..H-1, previous pass actions only"
+}

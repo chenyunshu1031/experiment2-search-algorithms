@@ -1,0 +1,8 @@
+﻿path,player,child_exact_values,returned,operation
+root/0/0,MAX,"[3, 5]",5,max
+root/0/1,MAX,"[6, 9]",9,max
+root/0,MIN,"[5, 9]",5,min
+root/1/0,MAX,"[6, 9]",9,max
+root/1/1,MAX,"[1, 2]",2,max
+root/1,MIN,"[9, 2]",2,min
+root,MAX,"[5, 2]",5,max

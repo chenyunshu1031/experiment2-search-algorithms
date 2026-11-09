@@ -1,0 +1,2175 @@
+{
+  "cost": 47,
+  "path": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      3,
+      0
+    ],
+    [
+      4,
+      0
+    ],
+    [
+      5,
+      0
+    ],
+    [
+      6,
+      0
+    ],
+    [
+      7,
+      0
+    ],
+    [
+      8,
+      0
+    ],
+    [
+      9,
+      0
+    ],
+    [
+      10,
+      0
+    ],
+    [
+      11,
+      0
+    ],
+    [
+      12,
+      0
+    ],
+    [
+      13,
+      0
+    ],
+    [
+      14,
+      0
+    ],
+    [
+      15,
+      0
+    ],
+    [
+      16,
+      0
+    ],
+    [
+      17,
+      0
+    ],
+    [
+      18,
+      0
+    ],
+    [
+      19,
+      0
+    ],
+    [
+      20,
+      0
+    ],
+    [
+      20,
+      1
+    ],
+    [
+      20,
+      2
+    ],
+    [
+      20,
+      3
+    ],
+    [
+      20,
+      4
+    ],
+    [
+      20,
+      5
+    ],
+    [
+      20,
+      6
+    ],
+    [
+      20,
+      7
+    ],
+    [
+      20,
+      8
+    ],
+    [
+      20,
+      9
+    ],
+    [
+      20,
+      10
+    ],
+    [
+      20,
+      11
+    ],
+    [
+      20,
+      12
+    ],
+    [
+      20,
+      13
+    ],
+    [
+      20,
+      14
+    ],
+    [
+      20,
+      15
+    ],
+    [
+      20,
+      16
+    ],
+    [
+      20,
+      17
+    ],
+    [
+      20,
+      18
+    ],
+    [
+      20,
+      19
+    ],
+    [
+      20,
+      20
+    ]
+  ],
+  "stats": {
+    "expanded": 40,
+    "generated": 79,
+    "heap_pops": 41,
+    "stale_pops": 0,
+    "peak_frontier": 39,
+    "elapsed_seconds": 0.0009050000226125121,
+    "path_cost": 47,
+    "min_non_goal_cost": 1,
+    "min_goal_neighbor_cost": 9
+  },
+  "trace": [
+    {
+      "event": "relax",
+      "step": 0,
+      "node": [
+        0,
+        0
+      ],
+      "parent": null,
+      "old_g": null,
+      "g": 0,
+      "h": 47,
+      "f": 47,
+      "entry_cost": 0
+    },
+    {
+      "event": "expand",
+      "step": 1,
+      "node": [
+        0,
+        0
+      ],
+      "parent": null,
+      "g": 0,
+      "h": 47,
+      "f": 47,
+      "frontier_after_pop": 0
+    },
+    {
+      "event": "relax",
+      "step": 1,
+      "node": [
+        1,
+        0
+      ],
+      "parent": [
+        0,
+        0
+      ],
+      "old_g": null,
+      "g": 1,
+      "h": 46,
+      "f": 47,
+      "entry_cost": 1
+    },
+    {
+      "event": "relax",
+      "step": 1,
+      "node": [
+        0,
+        1
+      ],
+      "parent": [
+        0,
+        0
+      ],
+      "old_g": null,
+      "g": 1,
+      "h": 46,
+      "f": 47,
+      "entry_cost": 1
+    },
+    {
+      "event": "expand",
+      "step": 2,
+      "node": [
+        1,
+        0
+      ],
+      "parent": [
+        0,
+        0
+      ],
+      "g": 1,
+      "h": 46,
+      "f": 47,
+      "frontier_after_pop": 1
+    },
+    {
+      "event": "relax",
+      "step": 2,
+      "node": [
+        2,
+        0
+      ],
+      "parent": [
+        1,
+        0
+      ],
+      "old_g": null,
+      "g": 2,
+      "h": 45,
+      "f": 47,
+      "entry_cost": 1
+    },
+    {
+      "event": "relax",
+      "step": 2,
+      "node": [
+        1,
+        1
+      ],
+      "parent": [
+        1,
+        0
+      ],
+      "old_g": null,
+      "g": 2,
+      "h": 45,
+      "f": 47,
+      "entry_cost": 1
+    },
+    {
+      "event": "expand",
+      "step": 3,
+      "node": [
+        2,
+        0
+      ],
+      "parent": [
+        1,
+        0
+      ],
+      "g": 2,
+      "h": 45,
+      "f": 47,
+      "frontier_after_pop": 2
+    },
+    {
+      "event": "relax",
+      "step": 3,
+      "node": [
+        3,
+        0
+      ],
+      "parent": [
+        2,
+        0
+      ],
+      "old_g": null,
+      "g": 3,
+      "h": 44,
+      "f": 47,
+      "entry_cost": 1
+    },
+    {
+      "event": "relax",
+      "step": 3,
+      "node": [
+        2,
+        1
+      ],
+      "parent": [
+        2,
+        0
+      ],
+      "old_g": null,
+      "g": 3,
+      "h": 44,
+      "f": 47,
+      "entry_cost": 1
+    },
+    {
+      "event": "expand",
+      "step": 4,
+      "node": [
+        3,
+        0
+      ],
+      "parent": [
+        2,
+        0
+      ],
+      "g": 3,
+      "h": 44,
+      "f": 47,
+      "frontier_after_pop": 3
+    },
+    {
+      "event": "relax",
+      "step": 4,
+      "node": [
+        4,
+        0
+      ],
+      "parent": [
+        3,
+        0
+      ],
+      "old_g": null,
+      "g": 4,
+      "h": 43,
+      "f": 47,
+      "entry_cost": 1
+    },
+    {
+      "event": "relax",
+      "step": 4,
+      "node": [
+        3,
+        1
+      ],
+      "parent": [
+        3,
+        0
+      ],
+      "old_g": null,
+      "g": 4,
+      "h": 43,
+      "f": 47,
+      "entry_cost": 1
+    },
+    {
+      "event": "expand",
+      "step": 5,
+      "node": [
+        4,
+        0
+      ],
+      "parent": [
+        3,
+        0
+      ],
+      "g": 4,
+      "h": 43,
+      "f": 47,
+      "frontier_after_pop": 4
+    },
+    {
+      "event": "relax",
+      "step": 5,
+      "node": [
+        5,
+        0
+      ],
+      "parent": [
+        4,
+        0
+      ],
+      "old_g": null,
+      "g": 5,
+      "h": 42,
+      "f": 47,
+      "entry_cost": 1
+    },
+    {
+      "event": "relax",
+      "step": 5,
+      "node": [
+        4,
+        1
+      ],
+      "parent": [
+        4,
+        0
+      ],
+      "old_g": null,
+      "g": 5,
+      "h": 42,
+      "f": 47,
+      "entry_cost": 1
+    },
+    {
+      "event": "expand",
+      "step": 6,
+      "node": [
+        5,
+        0
+      ],
+      "parent": [
+        4,
+        0
+      ],
+      "g": 5,
+      "h": 42,
+      "f": 47,
+      "frontier_after_pop": 5
+    },
+    {
+      "event": "relax",
+      "step": 6,
+      "node": [
+        6,
+        0
+      ],
+      "parent": [
+        5,
+        0
+      ],
+      "old_g": null,
+      "g": 6,
+      "h": 41,
+      "f": 47,
+      "entry_cost": 1
+    },
+    {
+      "event": "relax",
+      "step": 6,
+      "node": [
+        5,
+        1
+      ],
+      "parent": [
+        5,
+        0
+      ],
+      "old_g": null,
+      "g": 6,
+      "h": 41,
+      "f": 47,
+      "entry_cost": 1
+    },
+    {
+      "event": "expand",
+      "step": 7,
+      "node": [
+        6,
+        0
+      ],
+      "parent": [
+        5,
+        0
+      ],
+      "g": 6,
+      "h": 41,
+      "f": 47,
+      "frontier_after_pop": 6
+    },
+    {
+      "event": "relax",
+      "step": 7,
+      "node": [
+        7,
+        0
+      ],
+      "parent": [
+        6,
+        0
+      ],
+      "old_g": null,
+      "g": 7,
+      "h": 40,
+      "f": 47,
+      "entry_cost": 1
+    },
+    {
+      "event": "relax",
+      "step": 7,
+      "node": [
+        6,
+        1
+      ],
+      "parent": [
+        6,
+        0
+      ],
+      "old_g": null,
+      "g": 7,
+      "h": 40,
+      "f": 47,
+      "entry_cost": 1
+    },
+    {
+      "event": "expand",
+      "step": 8,
+      "node": [
+        7,
+        0
+      ],
+      "parent": [
+        6,
+        0
+      ],
+      "g": 7,
+      "h": 40,
+      "f": 47,
+      "frontier_after_pop": 7
+    },
+    {
+      "event": "relax",
+      "step": 8,
+      "node": [
+        8,
+        0
+      ],
+      "parent": [
+        7,
+        0
+      ],
+      "old_g": null,
+      "g": 8,
+      "h": 39,
+      "f": 47,
+      "entry_cost": 1
+    },
+    {
+      "event": "relax",
+      "step": 8,
+      "node": [
+        7,
+        1
+      ],
+      "parent": [
+        7,
+        0
+      ],
+      "old_g": null,
+      "g": 8,
+      "h": 39,
+      "f": 47,
+      "entry_cost": 1
+    },
+    {
+      "event": "expand",
+      "step": 9,
+      "node": [
+        8,
+        0
+      ],
+      "parent": [
+        7,
+        0
+      ],
+      "g": 8,
+      "h": 39,
+      "f": 47,
+      "frontier_after_pop": 8
+    },
+    {
+      "event": "relax",
+      "step": 9,
+      "node": [
+        9,
+        0
+      ],
+      "parent": [
+        8,
+        0
+      ],
+      "old_g": null,
+      "g": 9,
+      "h": 38,
+      "f": 47,
+      "entry_cost": 1
+    },
+    {
+      "event": "relax",
+      "step": 9,
+      "node": [
+        8,
+        1
+      ],
+      "parent": [
+        8,
+        0
+      ],
+      "old_g": null,
+      "g": 9,
+      "h": 38,
+      "f": 47,
+      "entry_cost": 1
+    },
+    {
+      "event": "expand",
+      "step": 10,
+      "node": [
+        9,
+        0
+      ],
+      "parent": [
+        8,
+        0
+      ],
+      "g": 9,
+      "h": 38,
+      "f": 47,
+      "frontier_after_pop": 9
+    },
+    {
+      "event": "relax",
+      "step": 10,
+      "node": [
+        10,
+        0
+      ],
+      "parent": [
+        9,
+        0
+      ],
+      "old_g": null,
+      "g": 10,
+      "h": 37,
+      "f": 47,
+      "entry_cost": 1
+    },
+    {
+      "event": "relax",
+      "step": 10,
+      "node": [
+        9,
+        1
+      ],
+      "parent": [
+        9,
+        0
+      ],
+      "old_g": null,
+      "g": 10,
+      "h": 37,
+      "f": 47,
+      "entry_cost": 1
+    },
+    {
+      "event": "expand",
+      "step": 11,
+      "node": [
+        10,
+        0
+      ],
+      "parent": [
+        9,
+        0
+      ],
+      "g": 10,
+      "h": 37,
+      "f": 47,
+      "frontier_after_pop": 10
+    },
+    {
+      "event": "relax",
+      "step": 11,
+      "node": [
+        11,
+        0
+      ],
+      "parent": [
+        10,
+        0
+      ],
+      "old_g": null,
+      "g": 11,
+      "h": 36,
+      "f": 47,
+      "entry_cost": 1
+    },
+    {
+      "event": "relax",
+      "step": 11,
+      "node": [
+        10,
+        1
+      ],
+      "parent": [
+        10,
+        0
+      ],
+      "old_g": null,
+      "g": 11,
+      "h": 36,
+      "f": 47,
+      "entry_cost": 1
+    },
+    {
+      "event": "expand",
+      "step": 12,
+      "node": [
+        11,
+        0
+      ],
+      "parent": [
+        10,
+        0
+      ],
+      "g": 11,
+      "h": 36,
+      "f": 47,
+      "frontier_after_pop": 11
+    },
+    {
+      "event": "relax",
+      "step": 12,
+      "node": [
+        12,
+        0
+      ],
+      "parent": [
+        11,
+        0
+      ],
+      "old_g": null,
+      "g": 12,
+      "h": 35,
+      "f": 47,
+      "entry_cost": 1
+    },
+    {
+      "event": "relax",
+      "step": 12,
+      "node": [
+        11,
+        1
+      ],
+      "parent": [
+        11,
+        0
+      ],
+      "old_g": null,
+      "g": 12,
+      "h": 35,
+      "f": 47,
+      "entry_cost": 1
+    },
+    {
+      "event": "expand",
+      "step": 13,
+      "node": [
+        12,
+        0
+      ],
+      "parent": [
+        11,
+        0
+      ],
+      "g": 12,
+      "h": 35,
+      "f": 47,
+      "frontier_after_pop": 12
+    },
+    {
+      "event": "relax",
+      "step": 13,
+      "node": [
+        13,
+        0
+      ],
+      "parent": [
+        12,
+        0
+      ],
+      "old_g": null,
+      "g": 13,
+      "h": 34,
+      "f": 47,
+      "entry_cost": 1
+    },
+    {
+      "event": "relax",
+      "step": 13,
+      "node": [
+        12,
+        1
+      ],
+      "parent": [
+        12,
+        0
+      ],
+      "old_g": null,
+      "g": 13,
+      "h": 34,
+      "f": 47,
+      "entry_cost": 1
+    },
+    {
+      "event": "expand",
+      "step": 14,
+      "node": [
+        13,
+        0
+      ],
+      "parent": [
+        12,
+        0
+      ],
+      "g": 13,
+      "h": 34,
+      "f": 47,
+      "frontier_after_pop": 13
+    },
+    {
+      "event": "relax",
+      "step": 14,
+      "node": [
+        14,
+        0
+      ],
+      "parent": [
+        13,
+        0
+      ],
+      "old_g": null,
+      "g": 14,
+      "h": 33,
+      "f": 47,
+      "entry_cost": 1
+    },
+    {
+      "event": "relax",
+      "step": 14,
+      "node": [
+        13,
+        1
+      ],
+      "parent": [
+        13,
+        0
+      ],
+      "old_g": null,
+      "g": 14,
+      "h": 33,
+      "f": 47,
+      "entry_cost": 1
+    },
+    {
+      "event": "expand",
+      "step": 15,
+      "node": [
+        14,
+        0
+      ],
+      "parent": [
+        13,
+        0
+      ],
+      "g": 14,
+      "h": 33,
+      "f": 47,
+      "frontier_after_pop": 14
+    },
+    {
+      "event": "relax",
+      "step": 15,
+      "node": [
+        15,
+        0
+      ],
+      "parent": [
+        14,
+        0
+      ],
+      "old_g": null,
+      "g": 15,
+      "h": 32,
+      "f": 47,
+      "entry_cost": 1
+    },
+    {
+      "event": "relax",
+      "step": 15,
+      "node": [
+        14,
+        1
+      ],
+      "parent": [
+        14,
+        0
+      ],
+      "old_g": null,
+      "g": 15,
+      "h": 32,
+      "f": 47,
+      "entry_cost": 1
+    },
+    {
+      "event": "expand",
+      "step": 16,
+      "node": [
+        15,
+        0
+      ],
+      "parent": [
+        14,
+        0
+      ],
+      "g": 15,
+      "h": 32,
+      "f": 47,
+      "frontier_after_pop": 15
+    },
+    {
+      "event": "relax",
+      "step": 16,
+      "node": [
+        16,
+        0
+      ],
+      "parent": [
+        15,
+        0
+      ],
+      "old_g": null,
+      "g": 16,
+      "h": 31,
+      "f": 47,
+      "entry_cost": 1
+    },
+    {
+      "event": "relax",
+      "step": 16,
+      "node": [
+        15,
+        1
+      ],
+      "parent": [
+        15,
+        0
+      ],
+      "old_g": null,
+      "g": 16,
+      "h": 31,
+      "f": 47,
+      "entry_cost": 1
+    },
+    {
+      "event": "expand",
+      "step": 17,
+      "node": [
+        16,
+        0
+      ],
+      "parent": [
+        15,
+        0
+      ],
+      "g": 16,
+      "h": 31,
+      "f": 47,
+      "frontier_after_pop": 16
+    },
+    {
+      "event": "relax",
+      "step": 17,
+      "node": [
+        17,
+        0
+      ],
+      "parent": [
+        16,
+        0
+      ],
+      "old_g": null,
+      "g": 17,
+      "h": 30,
+      "f": 47,
+      "entry_cost": 1
+    },
+    {
+      "event": "relax",
+      "step": 17,
+      "node": [
+        16,
+        1
+      ],
+      "parent": [
+        16,
+        0
+      ],
+      "old_g": null,
+      "g": 17,
+      "h": 30,
+      "f": 47,
+      "entry_cost": 1
+    },
+    {
+      "event": "expand",
+      "step": 18,
+      "node": [
+        17,
+        0
+      ],
+      "parent": [
+        16,
+        0
+      ],
+      "g": 17,
+      "h": 30,
+      "f": 47,
+      "frontier_after_pop": 17
+    },
+    {
+      "event": "relax",
+      "step": 18,
+      "node": [
+        18,
+        0
+      ],
+      "parent": [
+        17,
+        0
+      ],
+      "old_g": null,
+      "g": 18,
+      "h": 29,
+      "f": 47,
+      "entry_cost": 1
+    },
+    {
+      "event": "relax",
+      "step": 18,
+      "node": [
+        17,
+        1
+      ],
+      "parent": [
+        17,
+        0
+      ],
+      "old_g": null,
+      "g": 18,
+      "h": 29,
+      "f": 47,
+      "entry_cost": 1
+    },
+    {
+      "event": "expand",
+      "step": 19,
+      "node": [
+        18,
+        0
+      ],
+      "parent": [
+        17,
+        0
+      ],
+      "g": 18,
+      "h": 29,
+      "f": 47,
+      "frontier_after_pop": 18
+    },
+    {
+      "event": "relax",
+      "step": 19,
+      "node": [
+        19,
+        0
+      ],
+      "parent": [
+        18,
+        0
+      ],
+      "old_g": null,
+      "g": 19,
+      "h": 28,
+      "f": 47,
+      "entry_cost": 1
+    },
+    {
+      "event": "relax",
+      "step": 19,
+      "node": [
+        18,
+        1
+      ],
+      "parent": [
+        18,
+        0
+      ],
+      "old_g": null,
+      "g": 19,
+      "h": 28,
+      "f": 47,
+      "entry_cost": 1
+    },
+    {
+      "event": "expand",
+      "step": 20,
+      "node": [
+        19,
+        0
+      ],
+      "parent": [
+        18,
+        0
+      ],
+      "g": 19,
+      "h": 28,
+      "f": 47,
+      "frontier_after_pop": 19
+    },
+    {
+      "event": "relax",
+      "step": 20,
+      "node": [
+        20,
+        0
+      ],
+      "parent": [
+        19,
+        0
+      ],
+      "old_g": null,
+      "g": 20,
+      "h": 27,
+      "f": 47,
+      "entry_cost": 1
+    },
+    {
+      "event": "relax",
+      "step": 20,
+      "node": [
+        19,
+        1
+      ],
+      "parent": [
+        19,
+        0
+      ],
+      "old_g": null,
+      "g": 20,
+      "h": 27,
+      "f": 47,
+      "entry_cost": 1
+    },
+    {
+      "event": "expand",
+      "step": 21,
+      "node": [
+        20,
+        0
+      ],
+      "parent": [
+        19,
+        0
+      ],
+      "g": 20,
+      "h": 27,
+      "f": 47,
+      "frontier_after_pop": 20
+    },
+    {
+      "event": "relax",
+      "step": 21,
+      "node": [
+        20,
+        1
+      ],
+      "parent": [
+        20,
+        0
+      ],
+      "old_g": null,
+      "g": 21,
+      "h": 26,
+      "f": 47,
+      "entry_cost": 1
+    },
+    {
+      "event": "expand",
+      "step": 22,
+      "node": [
+        20,
+        1
+      ],
+      "parent": [
+        20,
+        0
+      ],
+      "g": 21,
+      "h": 26,
+      "f": 47,
+      "frontier_after_pop": 20
+    },
+    {
+      "event": "relax",
+      "step": 22,
+      "node": [
+        20,
+        2
+      ],
+      "parent": [
+        20,
+        1
+      ],
+      "old_g": null,
+      "g": 22,
+      "h": 25,
+      "f": 47,
+      "entry_cost": 1
+    },
+    {
+      "event": "expand",
+      "step": 23,
+      "node": [
+        20,
+        2
+      ],
+      "parent": [
+        20,
+        1
+      ],
+      "g": 22,
+      "h": 25,
+      "f": 47,
+      "frontier_after_pop": 20
+    },
+    {
+      "event": "relax",
+      "step": 23,
+      "node": [
+        19,
+        2
+      ],
+      "parent": [
+        20,
+        2
+      ],
+      "old_g": null,
+      "g": 23,
+      "h": 26,
+      "f": 49,
+      "entry_cost": 1
+    },
+    {
+      "event": "relax",
+      "step": 23,
+      "node": [
+        20,
+        3
+      ],
+      "parent": [
+        20,
+        2
+      ],
+      "old_g": null,
+      "g": 23,
+      "h": 24,
+      "f": 47,
+      "entry_cost": 1
+    },
+    {
+      "event": "expand",
+      "step": 24,
+      "node": [
+        20,
+        3
+      ],
+      "parent": [
+        20,
+        2
+      ],
+      "g": 23,
+      "h": 24,
+      "f": 47,
+      "frontier_after_pop": 21
+    },
+    {
+      "event": "relax",
+      "step": 24,
+      "node": [
+        19,
+        3
+      ],
+      "parent": [
+        20,
+        3
+      ],
+      "old_g": null,
+      "g": 24,
+      "h": 25,
+      "f": 49,
+      "entry_cost": 1
+    },
+    {
+      "event": "relax",
+      "step": 24,
+      "node": [
+        20,
+        4
+      ],
+      "parent": [
+        20,
+        3
+      ],
+      "old_g": null,
+      "g": 24,
+      "h": 23,
+      "f": 47,
+      "entry_cost": 1
+    },
+    {
+      "event": "expand",
+      "step": 25,
+      "node": [
+        20,
+        4
+      ],
+      "parent": [
+        20,
+        3
+      ],
+      "g": 24,
+      "h": 23,
+      "f": 47,
+      "frontier_after_pop": 22
+    },
+    {
+      "event": "relax",
+      "step": 25,
+      "node": [
+        19,
+        4
+      ],
+      "parent": [
+        20,
+        4
+      ],
+      "old_g": null,
+      "g": 25,
+      "h": 24,
+      "f": 49,
+      "entry_cost": 1
+    },
+    {
+      "event": "relax",
+      "step": 25,
+      "node": [
+        20,
+        5
+      ],
+      "parent": [
+        20,
+        4
+      ],
+      "old_g": null,
+      "g": 25,
+      "h": 22,
+      "f": 47,
+      "entry_cost": 1
+    },
+    {
+      "event": "expand",
+      "step": 26,
+      "node": [
+        20,
+        5
+      ],
+      "parent": [
+        20,
+        4
+      ],
+      "g": 25,
+      "h": 22,
+      "f": 47,
+      "frontier_after_pop": 23
+    },
+    {
+      "event": "relax",
+      "step": 26,
+      "node": [
+        19,
+        5
+      ],
+      "parent": [
+        20,
+        5
+      ],
+      "old_g": null,
+      "g": 26,
+      "h": 23,
+      "f": 49,
+      "entry_cost": 1
+    },
+    {
+      "event": "relax",
+      "step": 26,
+      "node": [
+        20,
+        6
+      ],
+      "parent": [
+        20,
+        5
+      ],
+      "old_g": null,
+      "g": 26,
+      "h": 21,
+      "f": 47,
+      "entry_cost": 1
+    },
+    {
+      "event": "expand",
+      "step": 27,
+      "node": [
+        20,
+        6
+      ],
+      "parent": [
+        20,
+        5
+      ],
+      "g": 26,
+      "h": 21,
+      "f": 47,
+      "frontier_after_pop": 24
+    },
+    {
+      "event": "relax",
+      "step": 27,
+      "node": [
+        19,
+        6
+      ],
+      "parent": [
+        20,
+        6
+      ],
+      "old_g": null,
+      "g": 27,
+      "h": 22,
+      "f": 49,
+      "entry_cost": 1
+    },
+    {
+      "event": "relax",
+      "step": 27,
+      "node": [
+        20,
+        7
+      ],
+      "parent": [
+        20,
+        6
+      ],
+      "old_g": null,
+      "g": 27,
+      "h": 20,
+      "f": 47,
+      "entry_cost": 1
+    },
+    {
+      "event": "expand",
+      "step": 28,
+      "node": [
+        20,
+        7
+      ],
+      "parent": [
+        20,
+        6
+      ],
+      "g": 27,
+      "h": 20,
+      "f": 47,
+      "frontier_after_pop": 25
+    },
+    {
+      "event": "relax",
+      "step": 28,
+      "node": [
+        19,
+        7
+      ],
+      "parent": [
+        20,
+        7
+      ],
+      "old_g": null,
+      "g": 28,
+      "h": 21,
+      "f": 49,
+      "entry_cost": 1
+    },
+    {
+      "event": "relax",
+      "step": 28,
+      "node": [
+        20,
+        8
+      ],
+      "parent": [
+        20,
+        7
+      ],
+      "old_g": null,
+      "g": 28,
+      "h": 19,
+      "f": 47,
+      "entry_cost": 1
+    },
+    {
+      "event": "expand",
+      "step": 29,
+      "node": [
+        20,
+        8
+      ],
+      "parent": [
+        20,
+        7
+      ],
+      "g": 28,
+      "h": 19,
+      "f": 47,
+      "frontier_after_pop": 26
+    },
+    {
+      "event": "relax",
+      "step": 29,
+      "node": [
+        19,
+        8
+      ],
+      "parent": [
+        20,
+        8
+      ],
+      "old_g": null,
+      "g": 29,
+      "h": 20,
+      "f": 49,
+      "entry_cost": 1
+    },
+    {
+      "event": "relax",
+      "step": 29,
+      "node": [
+        20,
+        9
+      ],
+      "parent": [
+        20,
+        8
+      ],
+      "old_g": null,
+      "g": 29,
+      "h": 18,
+      "f": 47,
+      "entry_cost": 1
+    },
+    {
+      "event": "expand",
+      "step": 30,
+      "node": [
+        20,
+        9
+      ],
+      "parent": [
+        20,
+        8
+      ],
+      "g": 29,
+      "h": 18,
+      "f": 47,
+      "frontier_after_pop": 27
+    },
+    {
+      "event": "relax",
+      "step": 30,
+      "node": [
+        19,
+        9
+      ],
+      "parent": [
+        20,
+        9
+      ],
+      "old_g": null,
+      "g": 30,
+      "h": 19,
+      "f": 49,
+      "entry_cost": 1
+    },
+    {
+      "event": "relax",
+      "step": 30,
+      "node": [
+        20,
+        10
+      ],
+      "parent": [
+        20,
+        9
+      ],
+      "old_g": null,
+      "g": 30,
+      "h": 17,
+      "f": 47,
+      "entry_cost": 1
+    },
+    {
+      "event": "expand",
+      "step": 31,
+      "node": [
+        20,
+        10
+      ],
+      "parent": [
+        20,
+        9
+      ],
+      "g": 30,
+      "h": 17,
+      "f": 47,
+      "frontier_after_pop": 28
+    },
+    {
+      "event": "relax",
+      "step": 31,
+      "node": [
+        19,
+        10
+      ],
+      "parent": [
+        20,
+        10
+      ],
+      "old_g": null,
+      "g": 31,
+      "h": 18,
+      "f": 49,
+      "entry_cost": 1
+    },
+    {
+      "event": "relax",
+      "step": 31,
+      "node": [
+        20,
+        11
+      ],
+      "parent": [
+        20,
+        10
+      ],
+      "old_g": null,
+      "g": 31,
+      "h": 16,
+      "f": 47,
+      "entry_cost": 1
+    },
+    {
+      "event": "expand",
+      "step": 32,
+      "node": [
+        20,
+        11
+      ],
+      "parent": [
+        20,
+        10
+      ],
+      "g": 31,
+      "h": 16,
+      "f": 47,
+      "frontier_after_pop": 29
+    },
+    {
+      "event": "relax",
+      "step": 32,
+      "node": [
+        19,
+        11
+      ],
+      "parent": [
+        20,
+        11
+      ],
+      "old_g": null,
+      "g": 32,
+      "h": 17,
+      "f": 49,
+      "entry_cost": 1
+    },
+    {
+      "event": "relax",
+      "step": 32,
+      "node": [
+        20,
+        12
+      ],
+      "parent": [
+        20,
+        11
+      ],
+      "old_g": null,
+      "g": 32,
+      "h": 15,
+      "f": 47,
+      "entry_cost": 1
+    },
+    {
+      "event": "expand",
+      "step": 33,
+      "node": [
+        20,
+        12
+      ],
+      "parent": [
+        20,
+        11
+      ],
+      "g": 32,
+      "h": 15,
+      "f": 47,
+      "frontier_after_pop": 30
+    },
+    {
+      "event": "relax",
+      "step": 33,
+      "node": [
+        19,
+        12
+      ],
+      "parent": [
+        20,
+        12
+      ],
+      "old_g": null,
+      "g": 33,
+      "h": 16,
+      "f": 49,
+      "entry_cost": 1
+    },
+    {
+      "event": "relax",
+      "step": 33,
+      "node": [
+        20,
+        13
+      ],
+      "parent": [
+        20,
+        12
+      ],
+      "old_g": null,
+      "g": 33,
+      "h": 14,
+      "f": 47,
+      "entry_cost": 1
+    },
+    {
+      "event": "expand",
+      "step": 34,
+      "node": [
+        20,
+        13
+      ],
+      "parent": [
+        20,
+        12
+      ],
+      "g": 33,
+      "h": 14,
+      "f": 47,
+      "frontier_after_pop": 31
+    },
+    {
+      "event": "relax",
+      "step": 34,
+      "node": [
+        19,
+        13
+      ],
+      "parent": [
+        20,
+        13
+      ],
+      "old_g": null,
+      "g": 34,
+      "h": 15,
+      "f": 49,
+      "entry_cost": 1
+    },
+    {
+      "event": "relax",
+      "step": 34,
+      "node": [
+        20,
+        14
+      ],
+      "parent": [
+        20,
+        13
+      ],
+      "old_g": null,
+      "g": 34,
+      "h": 13,
+      "f": 47,
+      "entry_cost": 1
+    },
+    {
+      "event": "expand",
+      "step": 35,
+      "node": [
+        20,
+        14
+      ],
+      "parent": [
+        20,
+        13
+      ],
+      "g": 34,
+      "h": 13,
+      "f": 47,
+      "frontier_after_pop": 32
+    },
+    {
+      "event": "relax",
+      "step": 35,
+      "node": [
+        19,
+        14
+      ],
+      "parent": [
+        20,
+        14
+      ],
+      "old_g": null,
+      "g": 35,
+      "h": 14,
+      "f": 49,
+      "entry_cost": 1
+    },
+    {
+      "event": "relax",
+      "step": 35,
+      "node": [
+        20,
+        15
+      ],
+      "parent": [
+        20,
+        14
+      ],
+      "old_g": null,
+      "g": 35,
+      "h": 12,
+      "f": 47,
+      "entry_cost": 1
+    },
+    {
+      "event": "expand",
+      "step": 36,
+      "node": [
+        20,
+        15
+      ],
+      "parent": [
+        20,
+        14
+      ],
+      "g": 35,
+      "h": 12,
+      "f": 47,
+      "frontier_after_pop": 33
+    },
+    {
+      "event": "relax",
+      "step": 36,
+      "node": [
+        19,
+        15
+      ],
+      "parent": [
+        20,
+        15
+      ],
+      "old_g": null,
+      "g": 36,
+      "h": 13,
+      "f": 49,
+      "entry_cost": 1
+    },
+    {
+      "event": "relax",
+      "step": 36,
+      "node": [
+        20,
+        16
+      ],
+      "parent": [
+        20,
+        15
+      ],
+      "old_g": null,
+      "g": 36,
+      "h": 11,
+      "f": 47,
+      "entry_cost": 1
+    },
+    {
+      "event": "expand",
+      "step": 37,
+      "node": [
+        20,
+        16
+      ],
+      "parent": [
+        20,
+        15
+      ],
+      "g": 36,
+      "h": 11,
+      "f": 47,
+      "frontier_after_pop": 34
+    },
+    {
+      "event": "relax",
+      "step": 37,
+      "node": [
+        19,
+        16
+      ],
+      "parent": [
+        20,
+        16
+      ],
+      "old_g": null,
+      "g": 37,
+      "h": 12,
+      "f": 49,
+      "entry_cost": 1
+    },
+    {
+      "event": "relax",
+      "step": 37,
+      "node": [
+        20,
+        17
+      ],
+      "parent": [
+        20,
+        16
+      ],
+      "old_g": null,
+      "g": 37,
+      "h": 10,
+      "f": 47,
+      "entry_cost": 1
+    },
+    {
+      "event": "expand",
+      "step": 38,
+      "node": [
+        20,
+        17
+      ],
+      "parent": [
+        20,
+        16
+      ],
+      "g": 37,
+      "h": 10,
+      "f": 47,
+      "frontier_after_pop": 35
+    },
+    {
+      "event": "relax",
+      "step": 38,
+      "node": [
+        19,
+        17
+      ],
+      "parent": [
+        20,
+        17
+      ],
+      "old_g": null,
+      "g": 38,
+      "h": 11,
+      "f": 49,
+      "entry_cost": 1
+    },
+    {
+      "event": "relax",
+      "step": 38,
+      "node": [
+        20,
+        18
+      ],
+      "parent": [
+        20,
+        17
+      ],
+      "old_g": null,
+      "g": 38,
+      "h": 9,
+      "f": 47,
+      "entry_cost": 1
+    },
+    {
+      "event": "expand",
+      "step": 39,
+      "node": [
+        20,
+        18
+      ],
+      "parent": [
+        20,
+        17
+      ],
+      "g": 38,
+      "h": 9,
+      "f": 47,
+      "frontier_after_pop": 36
+    },
+    {
+      "event": "relax",
+      "step": 39,
+      "node": [
+        19,
+        18
+      ],
+      "parent": [
+        20,
+        18
+      ],
+      "old_g": null,
+      "g": 39,
+      "h": 10,
+      "f": 49,
+      "entry_cost": 1
+    },
+    {
+      "event": "relax",
+      "step": 39,
+      "node": [
+        20,
+        19
+      ],
+      "parent": [
+        20,
+        18
+      ],
+      "old_g": null,
+      "g": 47,
+      "h": 0,
+      "f": 47,
+      "entry_cost": 9
+    },
+    {
+      "event": "expand",
+      "step": 40,
+      "node": [
+        20,
+        19
+      ],
+      "parent": [
+        20,
+        18
+      ],
+      "g": 47,
+      "h": 0,
+      "f": 47,
+      "frontier_after_pop": 37
+    },
+    {
+      "event": "relax",
+      "step": 40,
+      "node": [
+        19,
+        19
+      ],
+      "parent": [
+        20,
+        19
+      ],
+      "old_g": null,
+      "g": 48,
+      "h": 9,
+      "f": 57,
+      "entry_cost": 1
+    },
+    {
+      "event": "relax",
+      "step": 40,
+      "node": [
+        20,
+        20
+      ],
+      "parent": [
+        20,
+        19
+      ],
+      "old_g": null,
+      "g": 47,
+      "h": 0,
+      "f": 47,
+      "entry_cost": 0
+    },
+    {
+      "event": "goal",
+      "step": 41,
+      "node": [
+        20,
+        20
+      ],
+      "parent": [
+        20,
+        19
+      ],
+      "g": 47,
+      "h": 0,
+      "f": 47,
+      "frontier_after_pop": 38
+    }
+  ]
+}

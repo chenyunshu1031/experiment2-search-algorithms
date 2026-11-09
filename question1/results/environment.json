@@ -1,0 +1,12 @@
+{
+  "python": "3.13.7",
+  "implementation": "CPython",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+  "logical_cpus": 32,
+  "repeats": 8,
+  "timer": "time.perf_counter",
+  "warmups_per_case_mode": 1,
+  "case_count": 46,
+  "timed_run_count": 1472
+}

@@ -1,0 +1,2 @@
+# Optional plotting dependency; solver, tests and measurements use standard library.
+matplotlib>=3.7,<4

@@ -1,0 +1,268 @@
+{
+  "score": 5,
+  "leaf_order": [
+    3,
+    5,
+    6,
+    6,
+    9,
+    1,
+    2
+  ],
+  "backprop": [
+    {
+      "path": "root/0/0",
+      "player": "MAX",
+      "child_exact_values": [
+        3,
+        5
+      ],
+      "returned": 5,
+      "operation": "max"
+    },
+    {
+      "path": "root/0/1",
+      "player": "MAX",
+      "child_exact_values": [
+        6,
+        9
+      ],
+      "returned": 9,
+      "operation": "max"
+    },
+    {
+      "path": "root/0",
+      "player": "MIN",
+      "child_exact_values": [
+        5,
+        9
+      ],
+      "returned": 5,
+      "operation": "min"
+    },
+    {
+      "path": "root/1/0",
+      "player": "MAX",
+      "child_exact_values": [
+        6,
+        9
+      ],
+      "returned": 9,
+      "operation": "max"
+    },
+    {
+      "path": "root/1/1",
+      "player": "MAX",
+      "child_exact_values": [
+        1,
+        2
+      ],
+      "returned": 2,
+      "operation": "max"
+    },
+    {
+      "path": "root/1",
+      "player": "MIN",
+      "child_exact_values": [
+        9,
+        2
+      ],
+      "returned": 2,
+      "operation": "min"
+    },
+    {
+      "path": "root",
+      "player": "MAX",
+      "child_exact_values": [
+        5,
+        2
+      ],
+      "returned": 5,
+      "operation": "max"
+    }
+  ],
+  "window_updates": [
+    {
+      "step": 6,
+      "path": "root/0/0",
+      "player": "MAX",
+      "child_path": "root/0/0/0",
+      "child_return": 3,
+      "child_flag": "EXACT",
+      "best": 3,
+      "alpha_before": "-inf",
+      "beta_before": "+inf",
+      "alpha_after": 3,
+      "beta_after": "+inf"
+    },
+    {
+      "step": 9,
+      "path": "root/0/0",
+      "player": "MAX",
+      "child_path": "root/0/0/1",
+      "child_return": 5,
+      "child_flag": "EXACT",
+      "best": 5,
+      "alpha_before": 3,
+      "beta_before": "+inf",
+      "alpha_after": 5,
+      "beta_after": "+inf"
+    },
+    {
+      "step": 11,
+      "path": "root/0",
+      "player": "MIN",
+      "child_path": "root/0/0",
+      "child_return": 5,
+      "child_flag": "EXACT",
+      "best": 5,
+      "alpha_before": "-inf",
+      "beta_before": "+inf",
+      "alpha_after": "-inf",
+      "beta_after": 5
+    },
+    {
+      "step": 15,
+      "path": "root/0/1",
+      "player": "MAX",
+      "child_path": "root/0/1/0",
+      "child_return": 6,
+      "child_flag": "EXACT",
+      "best": 6,
+      "alpha_before": "-inf",
+      "beta_before": 5,
+      "alpha_after": 6,
+      "beta_after": 5
+    },
+    {
+      "step": 18,
+      "path": "root/0",
+      "player": "MIN",
+      "child_path": "root/0/1",
+      "child_return": 6,
+      "child_flag": "LOWER",
+      "best": 5,
+      "alpha_before": "-inf",
+      "beta_before": 5,
+      "alpha_after": "-inf",
+      "beta_after": 5
+    },
+    {
+      "step": 20,
+      "path": "root",
+      "player": "MAX",
+      "child_path": "root/0",
+      "child_return": 5,
+      "child_flag": "EXACT",
+      "best": 5,
+      "alpha_before": "-inf",
+      "beta_before": "+inf",
+      "alpha_after": 5,
+      "beta_after": "+inf"
+    },
+    {
+      "step": 25,
+      "path": "root/1/0",
+      "player": "MAX",
+      "child_path": "root/1/0/0",
+      "child_return": 6,
+      "child_flag": "EXACT",
+      "best": 6,
+      "alpha_before": 5,
+      "beta_before": "+inf",
+      "alpha_after": 6,
+      "beta_after": "+inf"
+    },
+    {
+      "step": 28,
+      "path": "root/1/0",
+      "player": "MAX",
+      "child_path": "root/1/0/1",
+      "child_return": 9,
+      "child_flag": "EXACT",
+      "best": 9,
+      "alpha_before": 6,
+      "beta_before": "+inf",
+      "alpha_after": 9,
+      "beta_after": "+inf"
+    },
+    {
+      "step": 30,
+      "path": "root/1",
+      "player": "MIN",
+      "child_path": "root/1/0",
+      "child_return": 9,
+      "child_flag": "EXACT",
+      "best": 9,
+      "alpha_before": 5,
+      "beta_before": "+inf",
+      "alpha_after": 5,
+      "beta_after": 9
+    },
+    {
+      "step": 34,
+      "path": "root/1/1",
+      "player": "MAX",
+      "child_path": "root/1/1/0",
+      "child_return": 1,
+      "child_flag": "EXACT",
+      "best": 1,
+      "alpha_before": 5,
+      "beta_before": 9,
+      "alpha_after": 5,
+      "beta_after": 9
+    },
+    {
+      "step": 37,
+      "path": "root/1/1",
+      "player": "MAX",
+      "child_path": "root/1/1/1",
+      "child_return": 2,
+      "child_flag": "EXACT",
+      "best": 2,
+      "alpha_before": 5,
+      "beta_before": 9,
+      "alpha_after": 5,
+      "beta_after": 9
+    },
+    {
+      "step": 39,
+      "path": "root/1",
+      "player": "MIN",
+      "child_path": "root/1/1",
+      "child_return": 2,
+      "child_flag": "UPPER",
+      "best": 2,
+      "alpha_before": 5,
+      "beta_before": 9,
+      "alpha_after": 5,
+      "beta_after": 2
+    },
+    {
+      "step": 41,
+      "path": "root",
+      "player": "MAX",
+      "child_path": "root/1",
+      "child_return": 2,
+      "child_flag": "UPPER",
+      "best": 5,
+      "alpha_before": 5,
+      "beta_before": "+inf",
+      "alpha_after": 5,
+      "beta_after": "+inf"
+    }
+  ],
+  "cutoffs": [
+    {
+      "path": "root/0/1",
+      "player": "MAX",
+      "alpha": 6,
+      "beta": 5,
+      "skipped_indices": [
+        1
+      ],
+      "skipped_nodes": 1,
+      "skipped_leaves": 1
+    }
+  ]
+}

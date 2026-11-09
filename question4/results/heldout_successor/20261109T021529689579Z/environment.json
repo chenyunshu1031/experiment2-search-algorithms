@@ -1,0 +1,25 @@
+{
+  "python": "3.12.14",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+  "cases_sha256": "9d39288f0fa9fb641e7102e50b6a1c25f8f720fa4309168e7b9ef1d6430650c1",
+  "timed_runs": 576,
+  "timing_scope": "Fixed distance matrix; timing includes validation, ordering, construction, recursion and fresh cache. Distance calculation and oracle excluded.",
+  "sources": {
+    "heldout_successor_study.py": "0789d7ff736893993de65a3294f94ff7483f6a7e6c8f040f66af861b087ea3c6",
+    "experiment_cases.py": "4ddcd1efbe0d04d1986bbd270c9939d7e9a41581c56c513fbfcb2c57c1156a4d",
+    "treasure_game.py": "256f7ab4bb49af828d3529fe52abc99ba34b5e9b19c0d08fa1875deca093d57a",
+    "reference.py": "8de4550bf1942b6b3137ad8aa9272f93979d5580f897418d166e8681d902b072",
+    "course_study_io.py": "7fc101d2227aefa464f96067cedf1b3b2c8b3795123a363f9c7025f899b8644e"
+  },
+  "seeds": [
+    202611091,
+    202611092,
+    202611093,
+    202611094
+  ],
+  "repeats": 9,
+  "batch": 3,
+  "ordering": "greedy",
+  "gain_table": false
+}

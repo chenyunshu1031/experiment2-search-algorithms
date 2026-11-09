@@ -1,0 +1,16 @@
+{
+  "python": "3.12.14",
+  "packages": {
+    "Pillow": "13.0.0",
+    "matplotlib": "3.11.2"
+  },
+  "sources": {
+    "report_figures.py": "27d695b34b6653029d46ad0c816dda2239988bd6fea23967713bf943ce1b7de1",
+    "question1\\maze_astar.py": "27d1554a60c58b470acd7164409efe46db81a94b70f5cb450a4cfa7dd2b7085c",
+    "question2\\weighted_astar.py": "c84514649601536b276f405cb20d247f463b4e543030a5a7e4e1353a91de78fa",
+    "question2\\required_evidence.py": "7b14a21651d0d432e8b5f14ef6e24df8b6681547c1fbe1c1b2f2a284d9e0ef5b",
+    "question3\\game_tree.py": "95ddabe606acbf4345ed8294b3fffa4ee128c51049f175dd03e927572290f209",
+    "question4\\results\\root_action_values.csv": "bfafa6b09141a9e693df03f81d86e5c5d94e69805583be80e1ad874c755cc5cb"
+  },
+  "scope": "Trace/data reproduction; no timing rerun, no report or historical CSV overwrite."
+}

@@ -1,0 +1,39 @@
+{
+  "python": "3.12.14",
+  "provided_json_value": 5,
+  "trace_checked": true,
+  "bound_return_checks": 191,
+  "wrong_cache_diagnostic": {
+    "correct": 8,
+    "wrong_exact_cache": 6
+  },
+  "timing_inputs": 38,
+  "configs": 8,
+  "timed_runs": 2432,
+  "order_study_inputs": 4,
+  "order_seeds": 24,
+  "order_timed_runs": 1152,
+  "source_sha256": {
+    "analyze.py": "d27bfc0f731fc8158e9a6e1d67960182622b301d5d3eae9755203505cb52f663",
+    "analyze_structural.py": "4b1a0d5dae11b9f2d4c849c0f4091d8f781a322b3c579cc22dfc92b0539250f9",
+    "audit_report_evidence.py": "baf93935ae2ab5220fa4c86983b6aa3dab43a4d5255fc9c7c2a73261da41e7f3",
+    "benchmark.py": "18efdfe40d34fc388b7993f4d0b6b0e57957456f8dbd63d89513d8ae4aee474f",
+    "experiment_cases.py": "91973a643620f959923a3f9d83c6875669fa65837b7ab4d57c754840b757a05c",
+    "game_tree.py": "95ddabe606acbf4345ed8294b3fffa4ee128c51049f175dd03e927572290f209",
+    "reference.py": "475c7d7918d09c9f7ca9573900107dc0e90c2f23ca03db655f627ac9d57e328d",
+    "required_evidence.py": "ca1380bf519b316fcd267fc792a7260e401d20ae41ea04a6b8c7e7b947be4168",
+    "structural_cache.py": "65e33bc1ae791b5ec93b8c07821004e340a866cd5e3ffcd3c68717d5194fb3f8",
+    "structural_study.py": "b0057131948a68f552d42ff78a654a30e9b6f25611bbfd1969f26db349325142",
+    "test_game_tree.py": "eec76edcb0497004d94f85ee8912351fee67273042b2cdba038d9dce823045f5",
+    "test_structural_cache.py": "fda80ed5595fb1e766687f0bc5815e386250413ed2d4f1e243180b3c23cfa9dc"
+  },
+  "data_sha256": {
+    "oracle_order_diagnostics.csv": "754d3e5759718318e783d7af86cf6aa193e69dd256193bd2ec3d203a126989c5",
+    "order_study_by_seed.csv": "8fabb182dfac92992b920424c2195b32a58b248f742e6a8cb71b822b972de644",
+    "order_study_raw.csv": "e41933e0c6ad70251b6a46a5113e774b54f0f54852ffbd20481e862d4f6a82c1",
+    "order_summary.csv": "045fe984bc95abb0811fafc1d8d2682bfd6ff884cee683674adab09a09f776d8",
+    "raw_runs.csv": "dc0f620432ac1cdb2b7b976cd8d14254e422ee046a9df23d459dc69c4eeb3934",
+    "summary.csv": "1ba6d51298d72b3785d965cb9c0f2c45fd5ce8914fc4c4a7fa32bed353c8d136"
+  },
+  "scope": "Strict left order is the assignment default. Reordering and shared DAG caching are explicit extensions."
+}

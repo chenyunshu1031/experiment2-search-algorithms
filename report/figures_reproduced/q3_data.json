@@ -1,0 +1,28 @@
+{
+  "value": 5,
+  "leaf_order": [
+    3,
+    5,
+    6,
+    6,
+    9,
+    1,
+    2
+  ],
+  "cutoffs": [
+    {
+      "step": 16,
+      "event": "cutoff",
+      "path": "root/0/1",
+      "node": "n5",
+      "player": "MAX",
+      "alpha": 6,
+      "beta": 5,
+      "skipped_indices": [
+        1
+      ],
+      "skipped_nodes": 1,
+      "skipped_leaves": 1
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "python": "3.12.14",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+  "cases_sha256": "538e832a9d847df79f1a0ea603131b851fbbdaca4f9eacd2ce3e7279ce1fdddc",
+  "timed_runs": 588,
+  "timing_scope": "normalize + heuristic setup + search + path reconstruction",
+  "sources": {
+    "course_axis_study.py": "aa8ff56d05eab00653425f7dc4d90c623c2d11c47ad530792224783aa5ae6fbc",
+    "weighted_astar.py": "eee46831136337f413334ba31e0a6e9a136bee236a0ce1ba074713ce440d68f4",
+    "axis_heuristic.py": "5d0a5af10a478e774d9a847a6707fb1498c1389c2c1246b67dcef67405b75e5e",
+    "reference.py": "66afc45c3baa50879a6d4fe71f63d73722fd3d0cf26a710c258234c9137a81c7",
+    "course_study_io.py": "7fc101d2227aefa464f96067cedf1b3b2c8b3795123a363f9c7025f899b8644e"
+  },
+  "repeats": 6
+}

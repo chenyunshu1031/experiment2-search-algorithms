@@ -1,0 +1,20 @@
+[
+  {
+    "heuristic": "zero",
+    "tie": "fifo",
+    "expanded": 960,
+    "cost": 60
+  },
+  {
+    "heuristic": "manhattan",
+    "tie": "fifo",
+    "expanded": 960,
+    "cost": 60
+  },
+  {
+    "heuristic": "manhattan",
+    "tie": "larger-g",
+    "expanded": 60,
+    "cost": 60
+  }
+]

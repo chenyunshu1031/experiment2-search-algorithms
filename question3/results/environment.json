@@ -1,0 +1,64 @@
+{
+  "python": "3.13.7",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+  "logical_cpus": 32,
+  "repeats": 8,
+  "case_count": 38,
+  "timed_run_count": 2432,
+  "order_seed": 42,
+  "configs": [
+    {
+      "name": "minimax_left",
+      "algorithm": "minimax",
+      "order": "left",
+      "use_cache": false
+    },
+    {
+      "name": "ab_left",
+      "algorithm": "alphabeta",
+      "order": "left",
+      "use_cache": false
+    },
+    {
+      "name": "ab_reverse",
+      "algorithm": "alphabeta",
+      "order": "reverse",
+      "use_cache": false
+    },
+    {
+      "name": "ab_random",
+      "algorithm": "alphabeta",
+      "order": "random",
+      "use_cache": false
+    },
+    {
+      "name": "ab_probe",
+      "algorithm": "alphabeta",
+      "order": "probe",
+      "use_cache": false
+    },
+    {
+      "name": "ab_left_cache",
+      "algorithm": "alphabeta",
+      "order": "left",
+      "use_cache": true
+    },
+    {
+      "name": "ab_probe_cache",
+      "algorithm": "alphabeta",
+      "order": "probe",
+      "use_cache": true
+    },
+    {
+      "name": "minimax_left_cache",
+      "algorithm": "minimax",
+      "order": "left",
+      "use_cache": true
+    }
+  ],
+  "timer": "time.perf_counter",
+  "trace_enabled": false,
+  "root_player": "MAX",
+  "timing_scope": "acyclic-graph validation + online ordering + search + cache work"
+}

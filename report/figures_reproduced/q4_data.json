@@ -1,0 +1,29 @@
+{
+  "source": "question4\\results\\root_action_values.csv",
+  "source_sha256": "bfafa6b09141a9e693df03f81d86e5c5d94e69805583be80e1ad874c755cc5cb",
+  "targets": [
+    "T1",
+    "T2",
+    "T3",
+    "T4"
+  ],
+  "values": {
+    "2": [
+      -4,
+      -1,
+      -2,
+      -4
+    ],
+    "4": [
+      -5,
+      1,
+      3,
+      -7
+    ]
+  },
+  "best": {
+    "2": "T2",
+    "4": "T3"
+  },
+  "scope": "Exact full-enumeration values, not partial Alpha-beta returns."
+}

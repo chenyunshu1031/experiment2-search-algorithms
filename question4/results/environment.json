@@ -1,0 +1,67 @@
+{
+  "python": "3.13.7",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+  "logical_cpus": 32,
+  "cases": 16,
+  "case_depth_pairs": 34,
+  "game_repeats": 8,
+  "game_timed_runs": 2176,
+  "path_timed_runs": 256,
+  "workflow_timed_runs": 32,
+  "order_diagnostic_runs": 192,
+  "trace_enabled": false,
+  "game_timing": "validation + transitions + ordering + search + cache; excludes A* preparation",
+  "workflow_timing": "full required distance matrix + both H=2 and H=4 answers",
+  "order_seed": 42,
+  "configs": [
+    {
+      "name": "minimax_label",
+      "algorithm": "minimax",
+      "order": "label",
+      "use_cache": false
+    },
+    {
+      "name": "ab_label",
+      "algorithm": "alphabeta",
+      "order": "label",
+      "use_cache": false
+    },
+    {
+      "name": "ab_reverse",
+      "algorithm": "alphabeta",
+      "order": "reverse",
+      "use_cache": false
+    },
+    {
+      "name": "ab_random",
+      "algorithm": "alphabeta",
+      "order": "random",
+      "use_cache": false
+    },
+    {
+      "name": "ab_greedy",
+      "algorithm": "alphabeta",
+      "order": "greedy",
+      "use_cache": false
+    },
+    {
+      "name": "ab_label_cache",
+      "algorithm": "alphabeta",
+      "order": "label",
+      "use_cache": true
+    },
+    {
+      "name": "ab_greedy_cache",
+      "algorithm": "alphabeta",
+      "order": "greedy",
+      "use_cache": true
+    },
+    {
+      "name": "minimax_cache",
+      "algorithm": "minimax",
+      "order": "label",
+      "use_cache": true
+    }
+  ]
+}

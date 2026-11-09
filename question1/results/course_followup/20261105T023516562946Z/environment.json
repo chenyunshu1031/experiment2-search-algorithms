@@ -1,0 +1,15 @@
+{
+  "python": "3.12.14",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+  "cases_sha256": "cda09972eb6e0007a521feb4fa33583375802c091d17d44d71e43fdf271f0489",
+  "timed_runs": 1656,
+  "timing_scope": "input validation + heuristic + heap search + path reconstruction",
+  "sources": {
+    "heuristic_study.py": "ff4ccbbc3a164bd7aaa8d71ac5c07beab3eeeb2ee11e0c93f259bfd2684b5f14",
+    "maze_astar.py": "64a33e9b43f9053dad3b0e9ec9d2c14831a5c27ad06caa637f8474cdd21dcf25",
+    "benchmark.py": "09f6d9fa0f0974d96230c77a4138cd1a5536aef91c7e095b3b12baaa57192cb4",
+    "course_study_io.py": "7fc101d2227aefa464f96067cedf1b3b2c8b3795123a363f9c7025f899b8644e"
+  },
+  "repeats": 6
+}

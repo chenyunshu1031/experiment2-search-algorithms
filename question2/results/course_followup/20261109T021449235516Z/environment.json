@@ -1,0 +1,24 @@
+{
+  "python": "3.12.14",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+  "cases_sha256": "5f2fb3be5950ba853d3a48967692837471ff4a94ff04e23d19d62d7d3c326e1e",
+  "timed_runs": 576,
+  "timing_scope": "Total includes normalization, one preparation, forward searches and path recovery. Preparation estimate also includes per-query setup and batch overhead. Oracle excluded.",
+  "sources": {
+    "batch_reverse_study.py": "69e0b548611a5aa93e0ac3af21df534f2e05989c147e35be66a301e0f18a24ed",
+    "weighted_astar.py": "2e5e3873d56ab929db85f49def528e1c10e88704fe861afd6f9a36f772e90f4e",
+    "reverse_bound.py": "cfafd697b6e110eaeac3ebdd8e7bfb086b918ff463d122e2f4b0d7a2afd31d0c",
+    "reference.py": "66afc45c3baa50879a6d4fe71f63d73722fd3d0cf26a710c258234c9137a81c7",
+    "course_study_io.py": "7fc101d2227aefa464f96067cedf1b3b2c8b3795123a363f9c7025f899b8644e"
+  },
+  "seed": 20261109,
+  "repeats": 9,
+  "query_counts": [
+    1,
+    4,
+    16,
+    64
+  ],
+  "reverse_budget": 512
+}

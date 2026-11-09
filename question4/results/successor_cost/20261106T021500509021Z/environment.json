@@ -1,0 +1,18 @@
+{
+  "python": "3.12.14",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+  "cases_sha256": "2161b4d6c9cbefe8a031f99a25a362166b4e6979801fb01a226607e5173fd491",
+  "timed_runs": 3256,
+  "timing_scope": "Fixed exact distance matrix; validation, gain-table construction, sorting, state construction, recursion and fresh transposition cache included; oracle, A* and output excluded.",
+  "sources": {
+    "successor_cost_study.py": "9b64055ed9ab907424cd3997b209ce12f85314571c1c34855254e5c5d584576d",
+    "treasure_game.py": "256f7ab4bb49af828d3529fe52abc99ba34b5e9b19c0d08fa1875deca093d57a",
+    "reference.py": "8de4550bf1942b6b3137ad8aa9272f93979d5580f897418d166e8681d902b072",
+    "course_study_io.py": "7fc101d2227aefa464f96067cedf1b3b2c8b3795123a363f9c7025f899b8644e"
+  },
+  "repeats": 11,
+  "batch": 3,
+  "seed": 20261106,
+  "design": "2x2 gain/lazy; paired maps and horizons; cache on/off separately; cyclic order"
+}

@@ -1,0 +1,33 @@
+{
+  "cases_sha256": "ccb7f542bbddafaa0f492d055e5f34e21098e47eb8d6c5cd1b71c5d9ac00b31c",
+  "solver_sha256": "126925f83165b60531cb017118c1fe32c9cc216595c5581f904ffb8d3026e58d",
+  "python": "3.12.14",
+  "independent_inputs": 4,
+  "order_seeds": 24,
+  "repeats": 3,
+  "profiles": [
+    [
+      "mm_left",
+      "minimax",
+      "left"
+    ],
+    [
+      "mm_random",
+      "minimax",
+      "random"
+    ],
+    [
+      "ab_left",
+      "alphabeta",
+      "left"
+    ],
+    [
+      "ab_random",
+      "alphabeta",
+      "random"
+    ]
+  ],
+  "timed_runs": 1152,
+  "cache": false,
+  "timing_scope": "validation + online ordering + search; excludes warmup, file I/O, oracle and trace"
+}

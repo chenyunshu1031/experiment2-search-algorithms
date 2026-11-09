@@ -1,0 +1,59 @@
+{
+  "python": "3.12.14",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+  "cases_sha256": "db29da4b17fe34a9191a013e94aadc2865b106bcc099b8e547b98b29fc3cb15a",
+  "timed_runs": 3024,
+  "timing_scope": "one-shot total: validation, optional separate sharing + canonical validation OR fused structural keys during validation, left-order Alpha-beta, bound-aware cache; oracle excluded. prep_ms records only separate sharing; fused key preparation is included in search_total_ms.",
+  "sources": {
+    "structural_cache.py": "65e33bc1ae791b5ec93b8c07821004e340a866cd5e3ffcd3c68717d5194fb3f8",
+    "structural_study.py": "b0057131948a68f552d42ff78a654a30e9b6f25611bbfd1969f26db349325142",
+    "game_tree.py": "95ddabe606acbf4345ed8294b3fffa4ee128c51049f175dd03e927572290f209",
+    "reference.py": "475c7d7918d09c9f7ca9573900107dc0e90c2f23ca03db655f627ac9d57e328d",
+    "experiment_cases.py": "91973a643620f959923a3f9d83c6875669fa65837b7ab4d57c754840b757a05c",
+    "course_study_io.py": "7fc101d2227aefa464f96067cedf1b3b2c8b3795123a363f9c7025f899b8644e"
+  },
+  "repeats": 12,
+  "profiles": [
+    [
+      "original",
+      false,
+      false,
+      "identity"
+    ],
+    [
+      "cache",
+      false,
+      true,
+      "identity"
+    ],
+    [
+      "sharing",
+      true,
+      false,
+      "identity"
+    ],
+    [
+      "sharing_cache",
+      true,
+      true,
+      "identity"
+    ],
+    [
+      "fused_keys",
+      false,
+      false,
+      "structure"
+    ],
+    [
+      "fused_cache",
+      false,
+      true,
+      "structure"
+    ]
+  ],
+  "input_count": 42,
+  "warmup_per_configuration": 1,
+  "order": "left",
+  "cross_input_cache": false
+}

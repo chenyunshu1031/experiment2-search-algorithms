@@ -1,0 +1,2 @@
+# Optional: core solver, tests and benchmark need only the Python standard library.
+matplotlib>=3.7,<4

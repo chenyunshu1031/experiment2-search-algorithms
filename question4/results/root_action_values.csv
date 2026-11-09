@@ -1,0 +1,17 @@
+﻿H,target,exact_value,optimal
+1,T1,-1,False
+1,T2,2,True
+1,T3,-1,False
+1,T4,-1,False
+2,T1,-4,False
+2,T2,-1,True
+2,T3,-2,False
+2,T4,-4,False
+3,T1,-4,False
+3,T2,2,True
+3,T3,-1,False
+3,T4,-4,False
+4,T1,-5,False
+4,T2,1,False
+4,T3,3,True
+4,T4,-7,False

@@ -1,0 +1,9 @@
+{
+  "scenario_count": 54,
+  "unique_grid_start_end_count": 53,
+  "duplicate_scenario_names": [["toll_columns_61_1", "pocket_1"]],
+  "configuration_count": 8,
+  "timed_repeats_per_scenario_configuration": 8,
+  "timed_runs": 3456,
+  "note": "The duplicate scenarios remain in raw_runs.csv. They are not two independent maps."
+}

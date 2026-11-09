@@ -1,0 +1,44 @@
+{
+  "python": "3.13.7",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+  "logical_cpus": 32,
+  "repeats": 6,
+  "case_count": 46,
+  "timed_run_count": 1656,
+  "timer": "time.perf_counter",
+  "trace_enabled": false,
+  "timing_scope": "normalization + heuristic setup + search + path reconstruction",
+  "configs": [
+    [
+      "zero_fifo",
+      "zero",
+      "fifo"
+    ],
+    [
+      "zero_larger-g",
+      "zero",
+      "larger-g"
+    ],
+    [
+      "corrected_fifo",
+      "corrected",
+      "fifo"
+    ],
+    [
+      "corrected_larger-g",
+      "corrected",
+      "larger-g"
+    ],
+    [
+      "goal-aware_fifo",
+      "goal-aware",
+      "fifo"
+    ],
+    [
+      "goal-aware_larger-g",
+      "goal-aware",
+      "larger-g"
+    ]
+  ]
+}

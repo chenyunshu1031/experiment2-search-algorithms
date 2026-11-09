@@ -1,0 +1,17 @@
+﻿case,profile,seeds,min_leaves,max_leaves,mean_leaves,std_leaves
+equal_b3_d6,ab_left,24,53,53,53,0.0
+equal_b3_d6,ab_random,24,53,53,53,0.0
+equal_b3_d6,mm_left,24,729,729,729,0.0
+equal_b3_d6,mm_random,24,729,729,729,0.0
+increasing_b3_d6,ab_left,24,189,189,189,0.0
+increasing_b3_d6,ab_random,24,61,229,134.91666666666666,50.74274715551858
+increasing_b3_d6,mm_left,24,729,729,729,0.0
+increasing_b3_d6,mm_random,24,729,729,729,0.0
+official_json,ab_left,24,7,7,7,0.0
+official_json,ab_random,24,5,8,7,0.8660254037844386
+official_json,mm_left,24,8,8,8,0.0
+official_json,mm_random,24,8,8,8,0.0
+random_b3_d5_0,ab_left,24,74,74,74,0.0
+random_b3_d5_0,ab_random,24,87,160,115,19.939491802283563
+random_b3_d5_0,mm_left,24,243,243,243,0.0
+random_b3_d5_0,mm_random,24,243,243,243,0.0

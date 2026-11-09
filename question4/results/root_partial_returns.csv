@@ -1,0 +1,9 @@
+﻿H,target,exact_total,returned_total,flag,root_best_after
+2,T1,-4,-4,EXACT,-4
+2,T2,-1,-1,EXACT,-1
+2,T3,-2,-2,UPPER,-1
+2,T4,-4,-2,UPPER,-1
+4,T1,-5,-5,EXACT,-5
+4,T2,1,1,EXACT,1
+4,T3,3,3,EXACT,3
+4,T4,-7,-1,UPPER,3

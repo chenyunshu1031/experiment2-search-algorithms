@@ -1,0 +1,29 @@
+{
+  "python": "3.12.14",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+  "cases_sha256": "9ae2db4f9e5ddbcdf7b225406f9fa53a4091b3620e4ec09e88ea6a36b6eb63d7",
+  "timed_runs": 4293,
+  "timing_scope": "normalization + heuristic preparation + A* + reconstruction; independent checks excluded",
+  "sources": {
+    "geometry_heuristic_study.py": "6f26bb0d6c2515ba5caf8e8bae3496f379622d83c9261617cb21ebfa240125bb",
+    "weighted_astar.py": "c84514649601536b276f405cb20d247f463b4e543030a5a7e4e1353a91de78fa",
+    "axis_heuristic.py": "5d0a5af10a478e774d9a847a6707fb1498c1389c2c1246b67dcef67405b75e5e",
+    "reverse_bound.py": "cfafd697b6e110eaeac3ebdd8e7bfb086b918ff463d122e2f4b0d7a2afd31d0c",
+    "reference.py": "66afc45c3baa50879a6d4fe71f63d73722fd3d0cf26a710c258234c9137a81c7",
+    "weighted_heuristic_study.py": "fc7b7d5edd8d516cdd570ad32ab28599e9702678e5968d7db18504f27e20f76a",
+    "course_axis_study.py": "aa8ff56d05eab00653425f7dc4d90c623c2d11c47ad530792224783aa5ae6fbc",
+    "course_study_io.py": "7fc101d2227aefa464f96067cedf1b3b2c8b3795123a363f9c7025f899b8644e"
+  },
+  "repeats": 9,
+  "tie_break": "larger-g",
+  "warmup_per_configuration": 1,
+  "candidate_scenarios": 54,
+  "unique_inputs": 53,
+  "duplicate_aliases": {
+    "pocket_1": "toll_columns_61_1"
+  },
+  "point_checks": 1202112,
+  "edge_checks": 4331718,
+  "base_cases_sha256": "b993c468d391fe2be77bb5b60c6e1d69bf5de003e19d315c7c89c9e774787f8d"
+}
