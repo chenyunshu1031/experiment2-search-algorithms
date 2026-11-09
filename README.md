@@ -1,98 +1,146 @@
-# 实验二 搜索算法
+# 实验二 · 搜索算法
 
-四道题从最短路和博弈树出发，最后把两者用在同一个寻宝问题里。题一用 A* 找最短路径，题二改为计算加权地形的最小通行费，题三比较 Minimax 和 Alpha-Beta，题四先用 A* 计算关键点之间的路费，再让两位玩家轮流选择宝藏。
+本实验有四个问题：用 A* 找迷宫最短路径、计算加权地形的最低通行费、用 Alpha-Beta 求博弈树根值，以及结合 A* 和博弈搜索确定寻宝的最优首步。每题提供课程样例、独立核验和可复跑的对照实验。
 
-## 1. 下载和运行
+[快速运行](#1-快速运行) · [输入与目录](#2-输入与目录) · [四题设计与结果](#3-四题设计与结果) · [复现图表与计时](#4-复现图表与计时) · [核验口径与限制](#5-核验口径与限制) · [交付内容](#6-交付内容)
 
-在 Windows PowerShell 中执行。已有本地副本或解压后的提交包时，直接进入含 `verify_all.py` 的目录，从第三行开始。核心算法、测试与计时只用 Python 3.10 或更新版本的标准库。保存的实验在 Windows 11 下运行，Python 版本以每批的 `environment.json` 为准。
+## 1. 快速运行
+
+算法、测试和计时脚本使用 **Python 3.10 或更高版本**的标准库。课程样例随仓库提供，运行时无需下载数据。实验在 Windows 11 上完成，基础批次使用 Python 3.13.7，补充批次使用 3.12.14。每批的环境和计时范围以该目录的 `environment.json` 为准。
+
+以下命令适用于 Windows PowerShell。已下载仓库或解压提交包时，直接在含 `verify_all.py` 的目录运行后两条命令。若 Python 的启动命令是 `py` 或 `python3`，替换命令中的 `python` 即可。
 
 ```powershell
 git clone https://github.com/chenyunshu1031/experiment2-search-algorithms.git
 cd experiment2-search-algorithms
-$py = "python"
-& $py --version
-& $py verify_all.py
+python --version
+python verify_all.py
 ```
 
-若 Windows 只识别 `py`，将第三行改为 `$py = "py"`。统一入口会运行四道题的官方样例与 **57 项测试**，分题为 **7、12、17、21** 项。每次运行在 `verification/` 下生成带时间戳的 JSON，记录实际输出、测试日志和源码哈希。只查官方样例可加 `--smoke-only`。 [验收用测试日志](verification/20261109T035804598391Z/verification.json) · [样例命令与输出](verification/20261109T025803635497Z/sample_runs.txt)
+预期看到四行 `official sample passed`，分题通过 **7、12、17、21** 项测试，共 **57** 项，最后显示 `All passed.`。只跑样例可执行 `python verify_all.py --smoke-only`。完整核验会在 `verification/<时间戳>/verification.json` 保存输出、测试日志和源码哈希。 [完整核验记录](verification/20261109T035804598391Z/verification.json) · [样例命令与输出](verification/20261109T025803635497Z/sample_runs.txt)
 
-## 2. 逐题查看结果
-
-从仓库根目录执行以下命令。第四题的每条命令都运行 H=2 和 H=4。
+逐题查看正式输出可运行：
 
 ```powershell
-& $py question1/maze_astar.py --input question1/sample.json
-& $py question2/weighted_astar.py --input question2/sample.json
-& $py question3/game_tree.py --input question3/sample.json --algorithm minimax
-& $py question3/game_tree.py --input question3/sample.json --algorithm alphabeta
-& $py question4/treasure_game.py --input question4/sample.json --algorithm minimax
-& $py question4/treasure_game.py --input question4/sample.json --algorithm alphabeta
+python question1/maze_astar.py --input question1/sample.json
+python question2/weighted_astar.py --input question2/sample.json
+python question3/game_tree.py --input question3/sample.json --algorithm minimax
+python question3/game_tree.py --input question3/sample.json --algorithm alphabeta
+python question4/treasure_game.py --input question4/sample.json --algorithm minimax
+python question4/treasure_game.py --input question4/sample.json --algorithm alphabeta
 ```
 
-| 题目 | 输入与预期输出 |
-| --- | --- |
-| [1. 迷宫寻路](question1/README.md) | JSON 含 `grid`、`start`、`end`。坐标为从 0 开始的行、列。样例从 `(0,0)` 到 `(3,4)`，输出 8 个坐标，共 7 步。无路时返回 `[]`。 |
-| [2. 加权地形](question2/README.md) | 字段同题一，进入格子时收费，最后进入 E 免费。样例输出整数 `7`，无路时返回 `-1`。 |
-| [3. 博弈树](question3/README.md) | JSON 的 `tree_structure` 存放树。根为 MAX，按输入顺序从左到右。Minimax 和 Alpha-Beta 均输出 `5`。 |
-| [4. 宝藏分配](question4/README.md) | JSON 含 `grid`、`a_start`、`b_start`、`treasures`。输出标签、6×6 距离矩阵和两个深度的最优决策。两种算法均得 H=2 选 T2、收益差 −1，H=4 选 T3、收益差 3。 |
+| 题目 | 样例应得结果 | 独立核验 |
+| --- | --- | --- |
+| 迷宫寻路 | 路径含 8 个坐标、共 7 步。等长路径均可 | BFS |
+| 加权地形 | 最低通行费为 `7` | Dijkstra |
+| 博弈树 | 两种算法均返回 `5` | 完整自底向上回传 |
+| 宝藏分配 | 6×6 距离矩阵。两种算法在 H=2 均选 T2、收益差 −1，在 H=4 均选 T3、收益差 3 | Dijkstra 核对矩阵，宝藏排列穷举核对博弈值 |
 
-每个入口支持 `--help` 查看可选参数。`--stats` 将统计写到标准错误，正常答案仍从标准输出读取。把 `--input` 换成自备 JSON 即可运行其他输入，字段示例见各题的 `sample.json`。第四题遇到不可达的关键点会报错，因为原题没有定义跳过不可达宝藏的规则。
+## 2. 输入与目录
 
-## 3. 目录结构
+各题的 `sample.json` 就是最小输入示例。自备文件放在任意可读目录，用 `--input <路径>` 指定。网格坐标统一用从 0 开始的 `[行, 列]`，网格应为矩形，`X` 表示障碍。
+
+| 输入示例 | 字段及约定 | 输出 |
+| --- | --- | --- |
+| [迷宫](question1/sample.json) | `grid`、`start`、`end`。上下左右移动，每步费用 1 | 有序坐标序列。无解为 `[]`，加 `--format json` 可输出 JSON 数组 |
+| [加权地形](question2/sample.json) | `grid`、`start`、`end`。按进入格收费，起点初始和进入 E 免费 | 最低整数费用。无解为 `-1` |
+| [博弈树](question3/sample.json) | `tree_structure`。非叶节点有 `children`，叶子有 `value`。根为 MAX，角色逐层交替 | 根得分 |
+| [宝藏分配](question4/sample.json) | `grid`、`a_start`、`b_start`、`treasures`。宝藏用 `name`、`position`、`value` 描述，特殊格进入费为 1 | JSON 含点标签、距离矩阵、最优目标及收益差。默认输出 H=2 和 H=4 |
 
 ```text
-question1/              maze_astar.py、迷宫启发函数与独立 BFS 核验
-question2/              weighted_astar.py、加权启发函数与批量反向搜索
-question3/              game_tree.py、Minimax、Alpha-Beta 与结构缓存
-question4/              treasure_game.py、A* 距离矩阵与寻宝博弈
-question*/sample.json   课程样例输入
-question*/test_*.py     功能、边界和参考算法对照测试
-question*/results/     已保存的输入、轨迹、计时与汇总
-report/figures_reproduced/  五幅报告图及对应数值
-verification/           样例输出与完整测试日志
-verify_all.py           四题统一核验入口
-report_figures.py       五幅报告图的重建入口
+question1/                  迷宫 A*、同分顺序、隔墙下界
+question2/                  加权 A*、地形下界、同终点批量查询
+question3/                  Minimax、Alpha-Beta、顺序与结构缓存
+question4/                  距离矩阵、寻宝博弈及寻路和后继构造优化
+question*/sample.json       课程样例输入
+question*/test_*.py         功能、边界条件及与参考算法的对照测试
+question*/results/          固定输入、逐次计时、汇总、搜索轨迹
+verification/               逐题输出与完整测试记录
+report/figures_reproduced/   五幅报告图、对应数值、绘图环境
+verify_all.py               四题统一核验
+report_figures.py           从保存的数据重建报告图
+requirements-report-figures.txt  可选绘图依赖
 ```
 
-## 4. 复现报告图和对照实验
+## 3. 四题设计与结果
 
-### 先用保存的数据重画报告图
+### 题一 · 迷宫寻路
 
-绘图需要 Pillow 和 matplotlib，复现时使用 Pillow 13.0.0、matplotlib 3.11.2。建议先用 `& $py -m venv .venv` 创建虚拟环境，再将 `$py` 设为 `".\.venv\Scripts\python.exe"`。下列命令将五幅图和数值 JSON 写入 `.venv/repro/figures/`。图 1 是迷宫扩展范围，图 2 是路径费用与启发下界，图 3 是剪枝位置，图 4 是不同深度的首步收益，图 5 是单格费用与宝藏价值的单变量对照。 [原图及数据](report/figures_reproduced)
+A* 用坐标表示状态，`g` 记录已走步数，`h` 估计剩余步数，堆优先取 `f=g+h` 最小的状态。发现更短走法才更新距离和前驱。终点有效出堆后回溯前驱得到路径。默认用曼哈顿距离，同 `f` 优先较大的 `g`。
+
+固定 FIFO，样例的扩展数从零启发的 16 降到曼哈顿的 13，路径仍为 7 步。但在 31×31 对角空地上，最短路径前缀大量同为 `f=60`，两者用 FIFO 都扩展 960 格。保持曼哈顿、只改同分顺序后，扩展降到 60 格。另设隔墙缺口场景检验障碍感知下界，扩展 5151→300，但在 46 张图中有 41 张的计时中位数反而上升。 [题一设计、搜索轨迹和复跑命令](question1/README.md)
+
+### 题二 · 加权地形
+
+样例走 8 步，前 7 步各付 1，进入 E 付 0。离 E 一格时真实剩余费用为 0，因此普通曼哈顿可能高估。修正下界扣除免费一步，终点邻域下界再计入必经邻格的最低费用。固定较大 `g` 优先，样例从零启发的 14 次扩展降到 8 次。
+
+另设高价列、高价圈和多起点查询，分别检查下界能否识别必经费用、建表能否回本。高价整列场景中，行列下界使扩展 3060→120，但只按行列取最小值会漏掉局部高价圈。在 61×61 随机权值图上，单个起点查询用终点邻域 A* 更快。64 个起点共用一个终点时，逐次 A*、共享预算 512 的反向下界和精确反向搜索分别用时 132.463、104.249、5.208 ms，均含路径恢复。 [题二公式、费用明细和复跑命令](question2/README.md)
+
+### 题三 · Alpha-Beta 剪枝
+
+Minimax 从叶子回传收益，MAX 取最大值、MIN 取最小值。Alpha-Beta 在 `α ≥ β` 时跳过不能改变祖先决策的分支。按课程要求默认从左到右。样例根值为 5，Minimax 访问 15 个节点，左序剪枝访问 14 个。
+
+顺序对照固定输入、关闭缓存，比较左序、逆序、固定种子随机顺序和首叶探测。首叶探测将搜索阶段读取从 7 降到 6，但加上 14 次排序预读后共读 20 次。结构缓存另测重复和无重复树，并检查上下界能否安全复用。16 份重复子树的访问数 2950→250，含准备时间仅从 13.243 降至 11.276 ms。 [题三回传、顺序与缓存对照](question3/README.md)
+
+### 题四 · 宝藏分配
+
+先计算 A、B、T1–T4 的点对距离，再按双方位置、剩余宝藏位掩码、累计收益、当前玩家展开博弈。每次取宝的净收益为宝藏价值减路费。H=2 时 T2 的即时净收益较有利，H=4 时先拿 T3 会改变对手后两步的去向与路费。原题 H=4 下，Minimax、标签顺序 Alpha-Beta、收益排序 Alpha-Beta 分别访问 65、47、37 个节点。
+
+优化分开计量：寻路阶段比较逐点和多目标搜索，博弈阶段分别开关延迟创建后继与收益表。延迟构造在固定顺序下保留相同访问数，但省去被剪分支的对象创建，原题后继对象 44→36。另分别改变一个地形格费用与 T3 的价值，观察最短路改道、收益差和最优首步何时改变。 [题四矩阵、决策推演、消融与复跑命令](question4/README.md)
+
+## 4. 复现图表与计时
+
+### 从保存的数据重建报告图
+
+只跑算法或计时可跳过此处的安装。以下命令创建独立绘图环境。已安装绘图依赖时，可直接用当前 Python 运行最后一条命令。
 
 ```powershell
-& $py -m pip install -r requirements-report-figures.txt
-& $py report_figures.py --output .venv/repro/figures
+python -m venv .venv
+$plot = ".\.venv\Scripts\python.exe"
+& $plot -m pip install -r requirements-report-figures.txt
+& $plot report_figures.py --output .venv/repro/figures
 ```
 
-### 再从输入重跑对照
+原图使用 Python 3.12.14、Pillow 13.0.0 与 matplotlib 3.11.2。需要匹配该批版本时，安装 [该批依赖锁定文件](report/figures_reproduced/requirements-lock.txt)。图形在不同平台可能因字体而略有差异，可比对同时输出的数值 JSON。重建脚本读取保存的数据，重跑计时请用下一组命令。 [绘图环境与数据指纹](report/figures_reproduced/environment.json)
 
-下列命令沿用报告里的重复次数。每次用新的 `$run`，结果和随仓库提供的计时批次分开保存。
+| 报告图 | 用来观察什么 | 数值 |
+| --- | --- | --- |
+| [图 1 · 迷宫搜索范围](report/figures_reproduced/q1_equal_f.png) | 对角空地上的同 `f` 候选为何会拖慢 FIFO | [数据](report/figures_reproduced/q1_data.json) |
+| [图 2 · 加权路径与下界](report/figures_reproduced/q2_required_evidence.png) | 走 8 步为何只付 7，普通距离在哪里高估 | [数据](report/figures_reproduced/q2_data.json) |
+| [图 3 · 样例剪枝位置](report/figures_reproduced/q3_pruning.png) | 左序下哪个叶子被跳过，为什么根值不变 | [数据](report/figures_reproduced/q3_data.json) |
+| [图 4 · 不同深度的首步收益](report/figures_reproduced/q4_depth_choices.png) | T2、T3 的保证值何时改变排序 | [数据](report/figures_reproduced/q4_data.json) |
+| [图 5 · 地形与宝藏价值](report/figures_reproduced/q4_controlled_compact.png) | 只改变一项时，路费何时进入平台、首步何时切换 | [数据](report/figures_reproduced/q4_controls_data.json) |
+
+### 从输入重跑主要对照
+
+在根目录运行。先设置 `$run`，再执行所需题目的命令。同名输出目录可能已经存在，重跑时重新设置 `$run`。各题 README 还列出其他对照、输出位置和计时范围。
 
 ```powershell
 $run = Join-Path ".venv/repro" (Get-Date -Format "yyyyMMdd-HHmmss-fff")
 
-& $py question1/heuristic_study.py --repeats 7 --output "$run/q1-heuristics"
-& $py question2/geometry_heuristic_study.py --repeats 9 --output "$run/q2-heuristics"
-& $py question2/batch_reverse_study.py --repeats 7 --output "$run/q2-batch"
-& $py question3/benchmark.py --repeats 8 --output "$run/q3-order"
-& $py question3/audit_report_evidence.py --results "$run/q3-order" --study
-& $py question3/structural_study.py --repeats 12 --output "$run/q3-cache"
-& $py question4/benchmark.py --repeats 8 --output "$run/q4-game"
-& $py question4/successor_cost_study.py --repeats 11 --batch 3 --output "$run/q4-construction"
-& $py question4/heldout_successor_study.py --repeats 9 --batch 3 --output "$run/q4-new-maps"
-& $py question4/heuristic_field_study.py --repeats 7
+python question1/heuristic_study.py --repeats 7 --output "$run/q1-heuristics"
+python question2/geometry_heuristic_study.py --repeats 9 --output "$run/q2-heuristics"
+python question2/batch_reverse_study.py --repeats 7 --output "$run/q2-batch"
+python question3/benchmark.py --repeats 8 --output "$run/q3-order"
+python question3/audit_report_evidence.py --results "$run/q3-order" --study
+python question3/structural_study.py --repeats 12 --output "$run/q3-cache"
+python question4/benchmark.py --repeats 8 --output "$run/q4-game"
+python question4/successor_cost_study.py --repeats 11 --batch 3 --output "$run/q4-construction"
+python question4/heldout_successor_study.py --repeats 9 --batch 3 --output "$run/q4-new-maps"
+python question4/heuristic_field_study.py --repeats 7
 ```
 
-题四启发值场脚本会在 `question4/results/heuristic_field/` 新建时间戳目录。要重新计算图 5 的单变量数据，可在仓库副本中运行 `& $py question4/required_evidence.py --study`。它会在副本内更新 `controlled_parameter_results.csv` 和 `controlled_parameter_oracles.json`，随后运行绘图命令即可重画图 5。
+题四最后一个脚本在 `question4/results/heuristic_field/<时间戳>/` 创建新批次。如需从头计算图 5 的数据，在仓库副本中使用已安装绘图依赖的 Python 运行 `python question4/required_evidence.py --study`，再重画图。该命令会更新副本中对应的单变量结果文件。
 
-| 报告中的对照 | 看哪份数据 |
-| --- | --- |
-| 题一启发函数、同分顺序及隔墙下界 | [扩展数与耗时](question1/results/course_followup/20261105T024931827094Z/summary.csv) |
-| 题二几何与地形下界 | [扩展数与含建表的耗时](question2/results/geometry_followup/20261105T094155277386Z/summary.csv) |
-| 题二同终点批量查询 | [三种方法的 756 次计时汇总](question2/results/course_followup/20261109T031416794508Z/summary.csv) |
-| 题三访问顺序和结构缓存 | [顺序对照](question3/results/report_followup/20261105T2245261782216/summary.csv) · [结构缓存](question3/results/structural_followup/20261105T2239574201109/summary.csv) |
-| 题四距离、深度及首步变化 | [距离矩阵](question4/results/distance_matrix.csv) · [博弈开销](question4/results/game_summary.csv) · [单变量结果](question4/results/controlled_parameter_results.csv) |
-| 题四启发值场与延迟构造 | [启发值场](question4/results/heuristic_field/20261102T105518857084Z/summary.csv) · [构造与收益表](question4/results/successor_cost/20261106T021641697877Z/summary.csv) · [新地图复测](question4/results/heldout_successor/20261109T021529689579Z/summary.csv) |
+## 5. 核验口径与限制
 
-核对复跑结果时，先看答案和固定配置下的计数，再看耗时。以同一批次的中位数比较性能，并检查计时是否包含建表、排序或路径恢复。相同输入和顺序的扩展数可逐项比对，耗时会随机器和系统负载变化。
+- **先验算答案，再比较开销。** 检查路径是否经过合法四邻、累计费用是否正确，以及博弈算法是否返回相同根值。等长路径或等值首步可能有多个，核对代价或收益及最优集合。
+- **区分计数。** A* 的扩展数只计有效出堆后实际检查邻居的状态，终点出堆即结束，计为一次取出而非扩展。博弈访问数含根，开启缓存时访问数含命中，另外统计终端评价、预读和后继构造。
+- **比较同一批次。** `cases.json` 记录输入及适用的生成种子，`raw_runs.csv` 保存逐次测量，`summary.csv` 给出配置、计数和汇总，`environment.json` 记录运行环境、配置或源码指纹。题三和题四的基本随机顺序对照用种子 42，顺序敏感性另测多个种子。计时包含哪些准备步骤以该批记录为准。
+- **检查复现差异。** 优先比对答案、扩展数、访问数和配置。耗时受系统、硬件和负载影响。需要追查差异时用 `--stats` 查看标准错误上的统计，用 `--trace-output` 保存轨迹，并确认样例和配置与表中一致。记录轨迹会增加开销，计时用独立脚本。
+- **失败情况。** 迷宫与加权地形无解分别返回 `[]` 和 `-1`。输入字段有误、坐标越界或寻宝关键点间不连通时，按入口报错定位。寻宝状态空间随宝藏数和深度增长，较大的拓展地图主要用来单测寻路或有限深度搜索。
+
+## 6. 交付内容
+
+仓库提供算法、样例、测试、复现命令、实验数据和报告图。课程提交包另附五页报告 PDF 和实际终端运行截图。样例答案以命令行输出为准，其中题四的 JSON 可直接核对距离矩阵、H=2、H=4 与最优收益差。
