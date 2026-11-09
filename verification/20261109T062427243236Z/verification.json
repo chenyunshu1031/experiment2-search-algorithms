@@ -1,0 +1,191 @@
+{
+  "python": "3.12.14",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "smoke_only": false,
+  "tests": 57,
+  "questions": [
+    {
+      "question": 1,
+      "official_output": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "tests": 7,
+      "test_log": "test_counter_convention (test_maze_astar.MazeTests.test_counter_convention) ... ok\ntest_invalid_input (test_maze_astar.MazeTests.test_invalid_input) ... ok\ntest_official (test_maze_astar.MazeTests.test_official) ... ok\ntest_random_against_bfs (test_maze_astar.MazeTests.test_random_against_bfs) ... ok\ntest_special_cases (test_maze_astar.MazeTests.test_special_cases) ... ok\ntest_trace_preserves_results_and_explains_path (test_maze_astar.MazeTests.test_trace_preserves_results_and_explains_path) ... ok\ntest_zero_heuristic_negative_control (test_maze_astar.MazeTests.test_zero_heuristic_negative_control) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 0.174s\n\nOK\n"
+    },
+    {
+      "question": 2,
+      "official_output": 7,
+      "tests": 12,
+      "test_log": "test_admissibility_consistency_and_dominance (test_weighted_astar.WeightedTests.test_admissibility_consistency_and_dominance) ... ok\ntest_exact_reverse_batch_respects_entry_direction_and_zero_cycles (test_weighted_astar.WeightedTests.test_exact_reverse_batch_respects_entry_direction_and_zero_cycles) ... ok\ntest_free_goal_and_boundaries (test_weighted_astar.WeightedTests.test_free_goal_and_boundaries) ... ok\ntest_invalid_input (test_weighted_astar.WeightedTests.test_invalid_input) ... ok\ntest_official (test_weighted_astar.WeightedTests.test_official) ... ok\ntest_random_costs_against_independent_dijkstra (test_weighted_astar.WeightedTests.test_random_costs_against_independent_dijkstra) ... ok\ntest_required_path_cost_evidence (test_weighted_astar.WeightedTests.test_required_path_cost_evidence) ... ok\ntest_reverse_edge_cost (test_weighted_astar.WeightedTests.test_reverse_edge_cost) ... ok\ntest_shared_reverse_bound_with_different_starts (test_weighted_astar.WeightedTests.test_shared_reverse_bound_with_different_starts) ... ok\ntest_terminal_fee_rule_control (test_weighted_astar.WeightedTests.test_terminal_fee_rule_control) ... ok\ntest_trace_and_zero_cycles (test_weighted_astar.WeightedTests.test_trace_and_zero_cycles) ... ok\ntest_zero_terrain_raw_manhattan_counterexample (test_weighted_astar.WeightedTests.test_zero_terrain_raw_manhattan_counterexample) ... ok\n\n----------------------------------------------------------------------\nRan 12 tests in 0.960s\n\nOK\n"
+    },
+    {
+      "question": 3,
+      "official_output": 5,
+      "tests": 17,
+      "test_log": "test_ideal_order_diagnostic (test_game_tree.GameTreeTests.test_ideal_order_diagnostic) ... ok\ntest_intermediate_cache_bounds_against_true_values (test_game_tree.GameTreeTests.test_intermediate_cache_bounds_against_true_values) ... ok\ntest_invalid_input_and_cycles (test_game_tree.GameTreeTests.test_invalid_input_and_cycles) ... ok\ntest_leaf_chain_negative_zero_and_equal (test_game_tree.GameTreeTests.test_leaf_chain_negative_zero_and_equal) ... ok\ntest_lower_upper_and_player_cache_keys (test_game_tree.GameTreeTests.test_lower_upper_and_player_cache_keys) ... ok\ntest_multiple_order_seeds_and_full_minimax_control (test_game_tree.GameTreeTests.test_multiple_order_seeds_and_full_minimax_control) ... ok\ntest_official_and_shared_counts (test_game_tree.GameTreeTests.test_official_and_shared_counts) ... ok\ntest_random_shared_graphs (test_game_tree.GameTreeTests.test_random_shared_graphs) ... ok\ntest_random_trees (test_game_tree.GameTreeTests.test_random_trees) ... ok\ntest_serialization_and_player_validation (test_game_tree.GameTreeTests.test_serialization_and_player_validation) ... ok\ntest_stable_random_order_and_probe_cost (test_game_tree.GameTreeTests.test_stable_random_order_and_probe_cost) ... ok\ntest_trace_required_left_order_and_bounds (test_game_tree.GameTreeTests.test_trace_required_left_order_and_bounds) ... ok\ntest_window_evidence_matches_required_process (test_game_tree.GameTreeTests.test_window_evidence_matches_required_process) ... ok\ntest_boundary_types_and_cycles (test_structural_cache.StructuralTests.test_boundary_types_and_cycles) ... ok\ntest_official_and_cache_bounds (test_structural_cache.StructuralTests.test_official_and_cache_bounds) ... ok\ntest_random_trees_and_dags (test_structural_cache.StructuralTests.test_random_trees_and_dags) ... ok\ntest_signatures_preserve_order_and_differing_children (test_structural_cache.StructuralTests.test_signatures_preserve_order_and_differing_children) ... ok\n\n----------------------------------------------------------------------\nRan 17 tests in 2.167s\n\nOK\n"
+    },
+    {
+      "question": 4,
+      "official_output": {
+        "labels": [
+          "A",
+          "B",
+          "T1",
+          "T2",
+          "T3",
+          "T4"
+        ],
+        "distance_matrix": [
+          [
+            0,
+            12,
+            10,
+            4,
+            8,
+            8
+          ],
+          [
+            12,
+            0,
+            8,
+            8,
+            4,
+            10
+          ],
+          [
+            10,
+            8,
+            0,
+            6,
+            6,
+            12
+          ],
+          [
+            4,
+            8,
+            6,
+            0,
+            6,
+            6
+          ],
+          [
+            8,
+            4,
+            6,
+            6,
+            0,
+            6
+          ],
+          [
+            8,
+            10,
+            12,
+            6,
+            6,
+            0
+          ]
+        ],
+        "H=2": {
+          "best_target": "T2",
+          "best_value": -1
+        },
+        "H=4": {
+          "best_target": "T3",
+          "best_value": 3
+        }
+      },
+      "tests": 21,
+      "test_log": "test_duplicate_self_and_unreachable_targets (test_batched_pathfinding.BatchedTests.test_duplicate_self_and_unreachable_targets) ... ok\ntest_field_equals_direct_manhattan_everywhere (test_batched_pathfinding.BatchedTests.test_field_equals_direct_manhattan_everywhere) ... ok\ntest_official_and_existing_scenarios (test_batched_pathfinding.BatchedTests.test_official_and_existing_scenarios) ... ok\ntest_random_sizes_and_target_counts (test_batched_pathfinding.BatchedTests.test_random_sizes_and_target_counts) ... ok\ntest_same_heuristic_preserves_paths_and_search_counts (test_batched_pathfinding.BatchedTests.test_same_heuristic_preserves_paths_and_search_counts) ... ok\ntest_empty_game (test_successor_cost.SuccessorCostTests.test_empty_game) ... ok\ntest_official_trace_and_construction_equivalence (test_successor_cost.SuccessorCostTests.test_official_trace_and_construction_equivalence) ... ok\ntest_random_models_and_history_independence (test_successor_cost.SuccessorCostTests.test_random_models_and_history_independence) ... ok\ntest_depth_and_accumulated_score_translation (test_treasure_game.TreasureTests.test_depth_and_accumulated_score_translation) ... ok\ntest_distance_modes_and_charged_targets (test_treasure_game.TreasureTests.test_distance_modes_and_charged_targets) ... ok\ntest_invalid_inputs_and_disconnection (test_treasure_game.TreasureTests.test_invalid_inputs_and_disconnection) ... ok\ntest_official_matrix_and_targets (test_treasure_game.TreasureTests.test_official_matrix_and_targets) ... ok\ntest_on_demand_workflow_reference (test_treasure_game.TreasureTests.test_on_demand_workflow_reference) ... ok\ntest_partial_branch_return_is_a_bound (test_treasure_game.TreasureTests.test_partial_branch_return_is_a_bound) ... ok\ntest_pass_through_and_no_player_blocking (test_treasure_game.TreasureTests.test_pass_through_and_no_player_blocking) ... ok\ntest_random_models_against_all_permutations (test_treasure_game.TreasureTests.test_random_models_against_all_permutations) ... ok\ntest_random_physical_maps (test_treasure_game.TreasureTests.test_random_physical_maps) ... ok\ntest_shifted_windows_and_cache_bounds (test_treasure_game.TreasureTests.test_shifted_windows_and_cache_bounds) ... ok\ntest_single_variable_path_and_decision_thresholds (test_treasure_game.TreasureTests.test_single_variable_path_and_decision_thresholds) ... ok\ntest_ties_and_trace_do_not_change_answer (test_treasure_game.TreasureTests.test_ties_and_trace_do_not_change_answer) ... ok\ntest_transition_and_negative_b_gain (test_treasure_game.TreasureTests.test_transition_and_negative_b_gain) ... ok\n\n----------------------------------------------------------------------\nRan 21 tests in 1.119s\n\nOK\n"
+    }
+  ],
+  "source_hashes": {
+    "check_clean_study.py": "0a97d52da5ccd81e70a7dc16035ab820a5bf7442f64597814e4bd596d0cd2821",
+    "course_study_io.py": "7fc101d2227aefa464f96067cedf1b3b2c8b3795123a363f9c7025f899b8644e",
+    "question1\\analyze.py": "05bcc5cfbacfdd74447b843cb6fb4951e4e9c68769bb264c6129d1eb3ef269e1",
+    "question1\\barrier_heuristic.py": "8c9eacf5b56fcf4deda80ca109894895722cea9de5d74d5415ac2d3deb285312",
+    "question1\\benchmark.py": "09f6d9fa0f0974d96230c77a4138cd1a5536aef91c7e095b3b12baaa57192cb4",
+    "question1\\heuristic_study.py": "970459d39be21358da7176153f1d3e36238f68629c14bbd121045fa9f621578f",
+    "question1\\maze_astar.py": "27d1554a60c58b470acd7164409efe46db81a94b70f5cb450a4cfa7dd2b7085c",
+    "question1\\test_maze_astar.py": "ff4bb75b879a0f36d28cc24c20ca3f9d52ac79c03c341230d682f8a6e2a6e9d4",
+    "question2\\analyze.py": "3803da376ac2aa08952d0c71ac53427b93430d291c39bf1e8b76d17079629b72",
+    "question2\\analyze_geometry.py": "e5d6b26ac282084e0bc2c01624a0c11f5587ddda70b3e656624db211e4fb2057",
+    "question2\\axis_heuristic.py": "5d0a5af10a478e774d9a847a6707fb1498c1389c2c1246b67dcef67405b75e5e",
+    "question2\\batch_distance_policy_study.py": "ba0e94b7f893b06fa5cf58e46b4bac18f6c1e16aa0857a5d1429d4c363282a1e",
+    "question2\\batch_policy_study.py": "11f615149bf7f01afa3c40e8ff6e34daf4c5aa7e888efc0c35edcf594da72266",
+    "question2\\batch_reverse_study.py": "5303ec67dc0bdce3a328ef2b5af5c1ae88e0cc56a31c50de08dbeef794721ce1",
+    "question2\\benchmark.py": "72d128c4b86369423a5ac84ba3965336ba711e249d405f82e44a6832d681c3f9",
+    "question2\\course_axis_study.py": "aa8ff56d05eab00653425f7dc4d90c623c2d11c47ad530792224783aa5ae6fbc",
+    "question2\\experiment_cases.py": "9f77eb1cd3c67651ef0f7349162dcd192b9e959cd72990c5f2ac0a6f782482f9",
+    "question2\\geometry_heuristic_study.py": "6f26bb0d6c2515ba5caf8e8bae3496f379622d83c9261617cb21ebfa240125bb",
+    "question2\\reference.py": "66afc45c3baa50879a6d4fe71f63d73722fd3d0cf26a710c258234c9137a81c7",
+    "question2\\required_evidence.py": "7b14a21651d0d432e8b5f14ef6e24df8b6681547c1fbe1c1b2f2a284d9e0ef5b",
+    "question2\\reverse_bound.py": "5f4473656479add8485a1cb7cca04f33f0cd01e3038c2831de1c12c1c6f0d797",
+    "question2\\test_weighted_astar.py": "c98acb44056aa9eb4d914fb341f295d7baafc07935b02fa1055c307ff31cb17b",
+    "question2\\weighted_astar.py": "cb90b8192f9d6152fa9953ba35b460e9e0414c85277beca66708c2d743433159",
+    "question2\\weighted_heuristic_study.py": "fc7b7d5edd8d516cdd570ad32ab28599e9702678e5968d7db18504f27e20f76a",
+    "question3\\analyze.py": "d27bfc0f731fc8158e9a6e1d67960182622b301d5d3eae9755203505cb52f663",
+    "question3\\analyze_structural.py": "4b1a0d5dae11b9f2d4c849c0f4091d8f781a322b3c579cc22dfc92b0539250f9",
+    "question3\\audit_report_evidence.py": "baf93935ae2ab5220fa4c86983b6aa3dab43a4d5255fc9c7c2a73261da41e7f3",
+    "question3\\benchmark.py": "18efdfe40d34fc388b7993f4d0b6b0e57957456f8dbd63d89513d8ae4aee474f",
+    "question3\\experiment_cases.py": "91973a643620f959923a3f9d83c6875669fa65837b7ab4d57c754840b757a05c",
+    "question3\\game_tree.py": "95ddabe606acbf4345ed8294b3fffa4ee128c51049f175dd03e927572290f209",
+    "question3\\reference.py": "475c7d7918d09c9f7ca9573900107dc0e90c2f23ca03db655f627ac9d57e328d",
+    "question3\\required_evidence.py": "ca1380bf519b316fcd267fc792a7260e401d20ae41ea04a6b8c7e7b947be4168",
+    "question3\\structural_cache.py": "65e33bc1ae791b5ec93b8c07821004e340a866cd5e3ffcd3c68717d5194fb3f8",
+    "question3\\structural_study.py": "b0057131948a68f552d42ff78a654a30e9b6f25611bbfd1969f26db349325142",
+    "question3\\test_game_tree.py": "eec76edcb0497004d94f85ee8912351fee67273042b2cdba038d9dce823045f5",
+    "question3\\test_structural_cache.py": "fda80ed5595fb1e766687f0bc5815e386250413ed2d4f1e243180b3c23cfa9dc",
+    "question4\\analyze.py": "9bfbb8192dc157a708056e51f8b39ee9b18b7829139619bb04e42baee287acc9",
+    "question4\\analyze_successor_cost.py": "508286b8770944258cb63df2090ac0c7639e5022dabb5ec6f13c5c71146998b5",
+    "question4\\batched_pathfinding.py": "ecc03c8d12f50b08e55895cc4f7bc563c0448db24739e3e11be74215c08c4b6e",
+    "question4\\benchmark.py": "6773d396f54abef4977ff6a076dbbebb3c87973f0ea44f5404d73b7f3c4e6e62",
+    "question4\\course_order_study.py": "07cc02bec023a1d71f2dfc465c7184137fe6e0abbe99a779ddc5a6e15f4e8036",
+    "question4\\experiment_cases.py": "4ddcd1efbe0d04d1986bbd270c9939d7e9a41581c56c513fbfcb2c57c1156a4d",
+    "question4\\heldout_successor_study.py": "0789d7ff736893993de65a3294f94ff7483f6a7e6c8f040f66af861b087ea3c6",
+    "question4\\heuristic_field_study.py": "fa32209a0a1e2798f074a771c7f2dfea95d1c04965681c5a6ba6f013dad03af2",
+    "question4\\innovation_study.py": "89ccb1e6afdfd57f12dbb3481f9e1f78292c6bb2a1aab7dde9351e6306ab0651",
+    "question4\\pathfinding.py": "3d20f858c9391a826cae2890c1913037be44563c9b759eef7e11556052474203",
+    "question4\\plot_heuristic_field.py": "ba5275989ba61e35e38caeb3b03b0fb08c243211ec6017235eb9c92397bfcac1",
+    "question4\\reference.py": "8de4550bf1942b6b3137ad8aa9272f93979d5580f897418d166e8681d902b072",
+    "question4\\required_evidence.py": "0b3650280ea62fda1a361b9d62d519bcdf7a4a720ec59ae15cb180d49c3724b2",
+    "question4\\successor_cost_study.py": "06aa11db125781570d488332fee06a41ce98a47cc20ef8ed0e2704e0701ecabf",
+    "question4\\test_batched_pathfinding.py": "d153a443b294658c92856a997e38663bb99bc79f7e31ece8884fcc38328efc50",
+    "question4\\test_successor_cost.py": "938bcba564da54acc44bc48294a53ad0bb12d7a80ef54fdb9f7070cb207d9342",
+    "question4\\test_treasure_game.py": "623ffd807858ffe032cb943e4194cc6bebd643c8ab6cf7b0ed38134f9d4f0cf8",
+    "question4\\treasure_game.py": "256f7ab4bb49af828d3529fe52abc99ba34b5e9b19c0d08fa1875deca093d57a",
+    "report_figures.py": "3846af2245bc30408cd409add838b62c95ed70def5393eed12a4e4273bedad15",
+    "verify_all.py": "246c61bdbeab11c82f42b43493f865cdbcc24554e7b3382ccf8a2297c436925c"
+  },
+  "scope": "Self-built tests and provided examples only; no claim about hidden grader tests."
+}

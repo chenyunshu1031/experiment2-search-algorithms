@@ -1,0 +1,261 @@
+{
+  "python": "3.12.14",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+  "cases_sha256": "b206146d1c24ed8ea144b682ab9e03b2556214eb37e7b7483c0366e87634a19f",
+  "timed_runs": 1584,
+  "timing_scope": "Includes feature calculation and dispatch, preparation, searches and path recovery. Dijkstra checks are outside timing.",
+  "sources": {
+    "batch_distance_policy_study.py": "ba0e94b7f893b06fa5cf58e46b4bac18f6c1e16aa0857a5d1429d4c363282a1e",
+    "batch_policy_study.py": "11f615149bf7f01afa3c40e8ff6e34daf4c5aa7e888efc0c35edcf594da72266",
+    "weighted_astar.py": "cb90b8192f9d6152fa9953ba35b460e9e0414c85277beca66708c2d743433159",
+    "reverse_bound.py": "5f4473656479add8485a1cb7cca04f33f0cd01e3038c2831de1c12c1c6f0d797",
+    "reference.py": "66afc45c3baa50879a6d4fe71f63d73722fd3d0cf26a710c258234c9137a81c7",
+    "course_study_io.py": "7fc101d2227aefa464f96067cedf1b3b2c8b3795123a363f9c7025f899b8644e"
+  },
+  "development": {
+    "results/course_followup/20261109T031416794508Z/cases.json": "8324103585dd56b7c461dffbb1cbb0628129c70eb83162a7417a24b91ac98d68",
+    "results/course_followup/20261109T031416794508Z/summary.csv": "c881889a29f0a12cb49d3bfcabd9aa78ab0b05d62734c0f3663be8df8da1f2c7",
+    "results/batch_policy/20261109T053420608241Z/cases.json": "26b05d206e249597774af3b9613c0e110ef076ec955f42438a053bd14c643165",
+    "results/batch_policy/20261109T053420608241Z/summary.csv": "f13be6498385a3a25e253e6281ffc9113bad3c45b415d66a61059cbdce4c52bf"
+  },
+  "development_batches": 60,
+  "development_count_loss": 1.1083709199595302,
+  "candidates": [
+    {
+      "cutoffs": [
+        0,
+        50
+      ],
+      "mean_relative_time": 1.1209301727022278
+    },
+    {
+      "cutoffs": [
+        0,
+        60
+      ],
+      "mean_relative_time": 1.1626844472087023
+    },
+    {
+      "cutoffs": [
+        0,
+        70
+      ],
+      "mean_relative_time": 1.1182188312224557
+    },
+    {
+      "cutoffs": [
+        0,
+        80
+      ],
+      "mean_relative_time": 1.115333258408271
+    },
+    {
+      "cutoffs": [
+        0,
+        90
+      ],
+      "mean_relative_time": 1.086992577618015
+    },
+    {
+      "cutoffs": [
+        0,
+        100
+      ],
+      "mean_relative_time": 1.1083709199595302
+    },
+    {
+      "cutoffs": [
+        10,
+        50
+      ],
+      "mean_relative_time": 1.1209301727022278
+    },
+    {
+      "cutoffs": [
+        10,
+        60
+      ],
+      "mean_relative_time": 1.1626844472087023
+    },
+    {
+      "cutoffs": [
+        10,
+        70
+      ],
+      "mean_relative_time": 1.1182188312224557
+    },
+    {
+      "cutoffs": [
+        10,
+        80
+      ],
+      "mean_relative_time": 1.115333258408271
+    },
+    {
+      "cutoffs": [
+        10,
+        90
+      ],
+      "mean_relative_time": 1.086992577618015
+    },
+    {
+      "cutoffs": [
+        10,
+        100
+      ],
+      "mean_relative_time": 1.1083709199595302
+    },
+    {
+      "cutoffs": [
+        20,
+        50
+      ],
+      "mean_relative_time": 1.1168523209528196
+    },
+    {
+      "cutoffs": [
+        20,
+        60
+      ],
+      "mean_relative_time": 1.1586065954592941
+    },
+    {
+      "cutoffs": [
+        20,
+        70
+      ],
+      "mean_relative_time": 1.1141409794730475
+    },
+    {
+      "cutoffs": [
+        20,
+        80
+      ],
+      "mean_relative_time": 1.111255406658863
+    },
+    {
+      "cutoffs": [
+        20,
+        90
+      ],
+      "mean_relative_time": 1.0829147258686067
+    },
+    {
+      "cutoffs": [
+        20,
+        100
+      ],
+      "mean_relative_time": 1.104293068210122
+    },
+    {
+      "cutoffs": [
+        30,
+        50
+      ],
+      "mean_relative_time": 1.146201501048035
+    },
+    {
+      "cutoffs": [
+        30,
+        60
+      ],
+      "mean_relative_time": 1.1879557755545096
+    },
+    {
+      "cutoffs": [
+        30,
+        70
+      ],
+      "mean_relative_time": 1.1434901595682632
+    },
+    {
+      "cutoffs": [
+        30,
+        80
+      ],
+      "mean_relative_time": 1.1406045867540784
+    },
+    {
+      "cutoffs": [
+        30,
+        90
+      ],
+      "mean_relative_time": 1.1122639059638222
+    },
+    {
+      "cutoffs": [
+        30,
+        100
+      ],
+      "mean_relative_time": 1.1336422483053374
+    },
+    {
+      "cutoffs": [
+        40,
+        50
+      ],
+      "mean_relative_time": 1.1505981088402608
+    },
+    {
+      "cutoffs": [
+        40,
+        60
+      ],
+      "mean_relative_time": 1.1923523833467353
+    },
+    {
+      "cutoffs": [
+        40,
+        70
+      ],
+      "mean_relative_time": 1.1478867673604887
+    },
+    {
+      "cutoffs": [
+        40,
+        80
+      ],
+      "mean_relative_time": 1.1450011945463041
+    },
+    {
+      "cutoffs": [
+        40,
+        90
+      ],
+      "mean_relative_time": 1.116660513756048
+    },
+    {
+      "cutoffs": [
+        40,
+        100
+      ],
+      "mean_relative_time": 1.1380388560975632
+    }
+  ],
+  "cutoffs": [
+    20,
+    90
+  ],
+  "maps": [
+    [
+      2026110961,
+      37
+    ],
+    [
+      2026110962,
+      49
+    ],
+    [
+      2026110963,
+      59
+    ]
+  ],
+  "query_counts": [
+    1,
+    4,
+    16,
+    64
+  ],
+  "repeats": 11
+}
