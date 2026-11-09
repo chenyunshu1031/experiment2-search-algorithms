@@ -66,6 +66,8 @@ python verify_all.py
 
 完整核验应显示四行 `official sample passed`，各题通过 **7、12、17、21** 项测试，共 **57** 项，最后显示 `All passed.`。两种核验均写出 `verification/<时间戳>/verification.json`，其中 `questions[].official_output` 是四题样例答案，完整运行还记录测试日志和源码哈希。 [完整核验记录](verification/20261109T045008854425Z/verification.json) · [样例命令与输出](verification/20261109T025803635497Z/sample_runs.txt)
 
+[终端运行截图](verification/20261109T030652909457Z/terminal_verification.png)记录一次较早的四题核验，共 56 项测试，可与[同批 JSON 日志](verification/20261109T030652909457Z/verification.json)对照。当前 57 项测试的结果见上方完整核验记录。
+
 逐题运行 Minimax、Alpha-Beta 和两种 A*，可用以下命令：
 
 ```powershell
