@@ -40,7 +40,7 @@ python -m unittest -v
 
 表中是对手最优应对下 A 能保证的收益差，由排列穷举核验。H=2 时，A 拿 T2 得 2，B 拿 T3 得 3。H=4 时，A 虽然首取 T3 要亏 1，却抢走了 B 就近可得的宝藏。B 若取 T1，后续的一条最优对局是 A 再取 T2、B 最后取 T4。B 的最后一步付 12、亏 5，最终收益差为 3。 [首步精确值](results/root_action_values.csv) · [逐回合收益](results/principal_variations.csv) · [报告图 4](../report/figures_reproduced/q4_depth_choices.png)
 
-固定距离矩阵，H=4 的 Minimax、标签顺序 Alpha-Beta、收益排序 Alpha-Beta 分别访问 65、47、37 个节点。收益排序再加缓存，仍访问 37 次，终端评价从 12 降到 8，因为缓存命中也算访问。固定收益排序、只改根的首个试探动作，T2 先试访问 37 次，T3 先试访问 31 次，T1 或 T4 先试均为 43 次。四种顺序都返回 T3、收益差 3。 [博弈基准汇总](results/game_summary.csv)
+固定距离矩阵，H=4 的 Minimax、标签顺序 Alpha-Beta、收益排序 Alpha-Beta 分别访问 65、47、37 个节点。收益排序再加缓存，仍访问 37 次，终端评价从 12 降到 8，因为缓存命中也算访问。固定收益排序、只改根的首个试探动作，T2 先试访问 37 次，T3 先试访问 31 次，T1 或 T4 先试均为 43 次。四种顺序都返回 T3、收益差 3。 [博弈基准汇总](results/game_summary.csv) · [剪枝返回界限与精确值](results/root_partial_returns.csv)
 
 ## 优化与单变量拓展
 

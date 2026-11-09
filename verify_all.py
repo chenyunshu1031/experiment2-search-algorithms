@@ -47,7 +47,7 @@ def main():
         print(f'question{number}: official sample passed; {count} tests passed', flush=True)
     output = ROOT / 'verification' / datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S%fZ')
     output.mkdir(parents=True)
-    sources = sorted(p for p in ROOT.rglob('*.py') if 'verification' not in p.parts)
+    sources = sorted([*ROOT.glob('*.py'), *ROOT.glob('question[1-4]/*.py')])
     report = dict(python=platform.python_version(), platform=platform.platform(),
                   smoke_only=args.smoke_only, tests=sum(r['tests'] for r in rows), questions=rows,
                   source_hashes={str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in sources},
